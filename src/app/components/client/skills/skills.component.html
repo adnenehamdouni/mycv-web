@@ -1,0 +1,24 @@
+<p>skills works!</p>
+<ng-template [ngIf]="hasSkillss" [ngIfElse]="NoSkillsFound">
+  <div>
+    <div>
+      <ul class="skillss">
+        <li *ngFor="let skills of skillss">
+          <!--<a routerLink="/detail/{{ skills.id }}">
+                          <span class="badge">{{ skills.id }}</span> {{ skills.name }}
+                        </a>
+                        <button class="delete" title="delete skills" (click)="delete(skills)">
+                          x
+                        </button>-->
+          <span class="badge">{{ skills.id }}</span> {{ skills.name }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #NoSkillsFound>
+  <div>
+    No Skillss Found.
+  </div>
+</ng-template>
