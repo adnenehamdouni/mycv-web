@@ -41,6 +41,10 @@ export class SkillsComponent implements OnInit {
     this.sessionStorageService.getFromLocal("pure-awesomeness");
   }
 
+  /**
+   *
+   */
+
   getSkills() {
     this.skillsServie.getSkillss().subscribe(response => {
       this.response = response;
@@ -49,6 +53,10 @@ export class SkillsComponent implements OnInit {
       );
       if (this.response.skillsList != null) {
         this.skillss = this.response.skillsList;
+        // Save session data - Skills list
+        this.sessionStorageService.setSkillsContext(this.skillss);
+        // Retrieve session data - Skills list
+        this.sessionStorageService.getSkillsContext();
 
         this.hasSkillss = true;
       }

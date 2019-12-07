@@ -1,11 +1,13 @@
 import { Injectable, Inject, InjectionToken } from "@angular/core";
 import { SESSION_STORAGE, StorageService } from "ngx-webstorage-service";
+import { Skills } from "src/app/model/skills.model";
 
 export const MY_AWESOME_SERVICE_STORAGE = new InjectionToken<StorageService>(
   "MY_AWESOME_SERVICE_STORAGE"
 );
 
 const STORAGE_KEY: string = "pure-awesomeness";
+const SKILLS_CONTEXT_KEY: string = "skills";
 
 @Injectable({
   providedIn: "root"
@@ -16,6 +18,31 @@ export class SessionStorageService {
   constructor(
     @Inject(MY_AWESOME_SERVICE_STORAGE) private storage: StorageService
   ) {}
+
+  public setSkillsContext(skills: Skills[]): void {
+    console.log(
+      "SessionStorageService: setSkillsContext -> skills = " +
+        JSON.stringify(skills)
+    );
+    this.storage.set(STORAGE_KEY, skills);
+  }
+
+  public getSkillsContext(): Skills[] {
+    console.log(
+      "SessionStorageService: getSkillsContext -> key:" + SKILLS_CONTEXT_KEY
+    );
+    const value: Skills[] = this.storage.get(SKILLS_CONTEXT_KEY);
+    //this.data[key] = this.storage.get(key);
+    console.log(
+      "SessionStorageService: getSkillsContext -> value = " +
+        JSON.stringify(value)
+    );
+    return value;
+  }
+
+  /**
+   *
+   */
 
   public setToLocal(): number {
     const awesomenessLevel: number = this.storage.get(STORAGE_KEY) || 1337;

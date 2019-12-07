@@ -1,10 +1,38 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from "@angular/core";
+import { ContextService } from "./services/context/context.service";
+import { AppDetails } from "./model/init/app-details.model";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"]
 })
-export class AppComponent {
-  title = 'whataboutme';
+export class AppComponent implements OnInit, OnDestroy {
+  title = "whataboutme";
+
+  appDetails: AppDetails;
+
+  constructor(private context: ContextService) {}
+
+  ngOnInit(): void {
+    this.context.init().subscribe(response => {
+      this.appDetails = response;
+      console.log(
+        "AppComponent: retreive response : " + JSON.stringify(response)
+      );
+      if (this.appDetails != null) {
+        console.log(
+          "AppComponent: retreive appDetails : " +
+            JSON.stringify(this.appDetails)
+        );
+        // Save session data - appDetails
+
+        // Retrieve session data - Skills appDetails
+      }
+    });
+  }
+
+  ngOnDestroy(): void {
+    //
+  }
 }

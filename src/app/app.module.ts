@@ -12,6 +12,7 @@ import { FooterComponent } from "./shared/footer/footer.component";
 import { HeaderComponent } from "./shared/header/header.component";
 import { LayoutComponent } from "./shared/layout/layout.component";
 import { SkillsModule } from "./modules/skills/skills.module";
+import { ContextComponent } from './components/context/context.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SkillsModule } from "./modules/skills/skills.module";
     HomeComponent,
     FooterComponent,
     HeaderComponent,
-    LayoutComponent
+    LayoutComponent,
+    ContextComponent
   ],
   imports: [
     BrowserModule,
