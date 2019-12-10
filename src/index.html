@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -10,4 +10,665 @@
   <body>
     <app-root></app-root>
   </body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en" class="no-js"
+      xmlns:th="http://www.thymeleaf.org">
+  
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <title>Adnen HAMDOUNI - portfolio</title>
+    <base href="." />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Adnen HAMDOUNI - portfolio" />
+    <meta name="keywords" content="mobile, web, development, resume, jquery, css3, bootstrap, angular, jee, spring boot, portfolio" />
+    <meta name="author" content="Adnen HAMDOUNI" />
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/transition-animations.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/main.css" type="text/css">
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','../../../../../www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-92992662-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    <!-- This styles needs for demo -->
+    <link rel="stylesheet" href="assets/preview/lmpixels-demo-panel.css" type="text/css">
+    <!-- /This styles needs for demo -->
+
+    <script src="assets/js/jquery-2.1.3.min.js"></script>
+    <script src="assets/js/modernizr.custom.js"></script>
+    
+    <script src='../../../../../www.google.com/recaptcha/api.js'></script>
+  </head>
+
+  <body>
+    <!-- Loading animation -->
+    <div class="preloader">
+      <div class="preloader-animation">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+      </div>
+    </div>
+    <!-- /Loading animation -->
+
+    <div id="page" class="page">
+      <!-- Header -->
+      <header id="site_header" class="header">
+        <div class="my-photo">
+          <img src="assets/images/my_photo.jpg" alt="image">
+          <div class="mask"></div>
+        </div>
+
+        <div class="site-title-block">
+          <h1 class="site-title">Adnen HAMDOUNI</h1>
+          <p class="site-description">JavaEE / Angular developer</p>
+        </div>
+
+        <a class="menu-toggle mobile-visible">
+          <i class="fa fa-bars"></i>
+        </a>
+      </header>
+      <!-- /Header -->
+
+      <!-- Main Content -->
+      <div id="main" class="site-main">
+        <!-- Page changer wrapper -->
+        <div class="pt-wrapper">
+          <!-- Navigation & Social buttons -->
+          <div class="site-nav mobile-menu-hide">
+            <!-- Main menu -->
+            <ul id="nav" class="site-main-menu">
+              <!-- About Me Subpage link -->
+              <li>
+                <a class="pt-trigger" href="#about_me" data-animation="58" data-goto="1">About me</a><!-- href value = data-id without # of .pt-page -->
+              </li>
+              <!-- /About Me Subpage link -->
+              <li>
+                <a class="pt-trigger" href="#resume" data-animation="59" data-goto="2">Resume</a>
+              </li>
+              <li>
+                <a class="pt-trigger" href="#portfolio" data-animation="60" data-goto="3">Portfolio</a>
+              </li>
+              <li>
+                <a class="pt-trigger" href="#blog" data-animation="61" data-goto="4">Blog</a>
+              </li>
+              <li>
+                <a class="pt-trigger" href="#contact" data-animation="58" data-goto="5">Contact</a>
+              </li>
+            </ul>
+            <!-- /Main menu -->
+
+            <!-- Social buttons -->
+            <ul class="social-links">
+              <li><a class="tip social-button" href="https://twitter.com/hamdouniadnen" title="Twitter"><i class="fa fa-twitter"></i></a></li> <!-- Full list of social icons: http://fontawesome.io/icons/#brand -->
+              <li><a class="tip social-button" href="https://www.facebook.com/AdnenHamdouni/" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="tip social-button" href="https://plus.google.com/u/0/+AdnenHamdounii" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+              <!--<li><a class="tip social-button" href="#" title="Youtube"><i class="fa fa-youtube"></i></a></li>-->
+              <!--<li><a class="tip social-button" href="#" title="last.fm"><i class="fa fa-lastfm"></i></a></li>-->
+              <!--<li><a class="tip social-button" href="#" title="Dribbble"><i class="fa fa-dribbble"></i></a></li>-->
+            </ul>
+            <!-- /Social buttons -->
+          </div>
+          <!-- Navigation & Social buttons -->
+
+          <!-- Subpages -->
+          <div class="subpages">
+            <!-- About Me Subpage -->
+            <section class="pt-page pt-page-1" data-id="about_me">
+              <div class="section-title-block">
+                <h2 class="section-title">About Me</h2>
+                <h5 class="section-description">Java / Angular developer</h5>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-12 col-md-12 mobile-visible subpage-block">
+                  <div class="my-photo-small">
+                    <img src="assets/images/my_photo.jpg" alt="image">
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-6 subpage-block">
+                  <div class="general-info">
+                    <h3>I am JavaEE / Angular & Mobile Developer </h3>
+                    <p>I am a software developer from Sfax (Tunisia). I love everything that is related to JEE (Spring Boot) mobile development, web programming (angular) and embedded systems. Specializing in software development, computer engineering graduate with experience developing innovative and creative software solutions. I'm an enthusiastic software developer who has a long history of development, implementation and software tested to meet specific project requirements. Also passionate about mobile development especially on the Android platform.</p>
+                    <p>I attended many challenges and Hackathons to brush up my skills and enjoy this wonderful green world. Now, I’m stepping forward to the other side to start sharing my knowledge with others to communicate to them the passion and good practices of development.</p>
+                  </div>
+                </div>
+
+                <!--<div class="col-sm-4 col-md-4 subpage-block">
+                  <div class="block end">
+                    <ul class="info-list">
+                      <li><span class="title">Name</span><span class="value">Alex Smith</span></li>
+                      <li><span class="title">Age</span><span class="value">29</span></li>
+                      <li><span class="title">Address</span><span class="value">88 Street - State, Town</span></li>
+                      <li><span class="title">e-mail</span><span class="value"><a href="mailto:email@addres.com">email@addres.com</a></span></li>
+                      <li><span class="title">Phone</span><span class="value">+0123 123 456 789</span></li>
+                      <li><span class="title">Freelance</span><span class="value available">Available</span></li>
+                    </ul>
+                  </div>
+                </div>-->
+
+                <div class="col-sm-6 col-md-6 subpage-block">
+                  <div class="block-title">
+                    <h3>Testimonials</h3>
+                  </div>
+                  <div class="testimonials owl-carousel">
+
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-item">
+                      <!-- Testimonial Content -->
+                      <div class="testimonial-content">
+                        <div class="testimonial-text">
+                          <p>"We really appreciated working together. Our Android Application, which was the lead developer in our Android audioguide project. He is an expert in Android programming and design, the collaboration was very professional and we got always instant replies when we needed any changes in the app. The level of service was amazing and the delivery always on time. It was a pleasure to work together."</p>
+                        </div>
+                      </div>            
+                      <!-- /Testimonial Content -->  
+                      <!-- Testimonial Author -->
+                      <div class="testimonial-credits">
+                        <!-- Picture -->
+                        <div class="testimonial-picture">
+                          <img src="assets/images/testimonials/testimonial_photo_1.png" alt="">
+                        </div>              
+                        <!-- /Picture -->
+                        <!-- Testimonial author information -->
+                        <div class="testimonial-author-info">
+                          <p class="testimonial-author">Michael Brey</p>
+                          <p class="testimonial-firm">ostmodern.com</p>
+                        </div>
+                      </div>
+                      <!-- /Testimonial author information -->               
+                    </div>
+                    <!-- End of Testimonial 1 -->
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-item">
+                      <!-- Testimonial Content -->
+                      <div class="testimonial-content">
+                        <div class="testimonial-text">
+                          <p>"We really appreciated working together. Our Android Application, which was the lead developer in our Android audioguide project. He is an expert in Android programming and design, the collaboration was very professional and we got always instant replies when we needed any changes in the app. The level of service was amazing and the delivery always on time. It was a pleasure to work together."</p>
+                        </div>
+                      </div>            
+                      <!-- /Testimonial Content -->  
+                      <!-- Testimonial Author -->
+                      <div class="testimonial-credits">
+                        <!-- Picture -->
+                        <div class="testimonial-picture">
+                          <img src="assets/images/testimonials/testimonial_photo_1.png" alt="">
+                        </div>              
+                        <!-- /Picture -->
+                        <!-- Testimonial author information -->
+                        <div class="testimonial-author-info">
+                          <p class="testimonial-author">Michael Brey</p>
+                          <p class="testimonial-firm">ostmodern.com</p>
+                        </div>
+                      </div>
+                      <!-- /Testimonial author information -->               
+                    </div>
+                    <!-- End of Testimonial 2 -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- Services block -->
+              <div class="block-title">
+                <h3>Services</h3>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6 col-md-3 subpage-block">
+                  <div class="service-block"> 
+                    <div class="service-info">
+                      <img src="assets/images/service/web_design.png" alt="Responsive Design">
+                      <h4>Web and mobile development</h4>
+                      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>-->
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 subpage-block">
+                  <div class="service-block"> 
+                    <div class="service-info">
+                      <img src="assets/images/service/copywrite.png" alt="Copywriter">
+                      <h4>Consulting</h4>
+                      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>-->
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 subpage-block">
+                  <div class="service-block"> 
+                    <div class="service-info">
+                      <img src="assets/images/service/ecommerce.png" alt="E-Commerce">
+                      <h4>Freelance</h4>
+                      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>-->
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 subpage-block">
+                  <div class="service-block"> 
+                    <div class="service-info">
+                      <img src="images/service/management.png" alt="Management">
+                      <h4>Management</h4>
+                      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End of Services block -->
+
+              <!-- Clients block -->
+              <!--<div class="block-title">
+                <h3>Clients</h3>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-4 col-md-2 subpage-block">
+                  <div class="client_block">
+                    <a href="#" target="_blank"><img src="images/clients/client_1.png" alt="image"></a>
+                  </div>
+                </div>
+
+                <div class="col-sm-4 col-md-2 subpage-block">
+                  <div class="client_block">
+                    <a href="#" target="_blank"><img src="images/clients/client_2.png" alt="image"></a>
+                  </div>
+                </div>
+
+                <div class="col-sm-4 col-md-2 subpage-block">
+                  <div class="client_block">
+                    <a href="#" target="_blank"><img src="images/clients/client_3.png" alt="image"></a>
+                  </div>
+                </div>
+
+                <div class="col-sm-4 col-md-2 subpage-block">
+                  <div class="client_block">
+                    <a href="#" target="_blank"><img src="images/clients/client_4.png" alt="image"></a>
+                  </div>
+                </div>
+
+                <div class="col-sm-4 col-md-2 subpage-block">
+                  <div class="client_block">
+                    <a href="#" target="_blank"><img src="images/clients/client_5.png" alt="image"></a>
+                  </div>
+                </div>
+
+                <div class="col-sm-4 col-md-2 subpage-block">
+                  <div class="client_block">
+                    <a href="#" target="_blank"><img src="images/clients/client_6.png" alt="image"></a>
+                  </div>
+                </div>
+              </div>-->
+              <!-- End of Clients block -->
+
+              <!-- Fun facts block -->
+              <div class="block-title">
+                <h3>Fun Facts</h3>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6 col-md-3 subpage-block">
+                  <div class="fun-fact-block gray-bg"> 
+                    <i class="pe-7s-icon pe-7s-smile"></i>
+                    <h4>Happy Clients</h4>
+                    <span class="fun-value">4</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 subpage-block">
+                  <div class="fun-fact-block"> 
+                    <i class="pe-7s-icon pe-7s-alarm"></i>
+                    <h4>Working Hours</h4>
+                    <span class="fun-value">24/24</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 subpage-block">
+                  <div class="fun-fact-block gray-bg"> 
+                    <i class="pe-7s-icon pe-7s-medal"></i>
+                    <h4>Training Session</h4>
+                    <span class="fun-value">10</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 subpage-block">
+                  <div class="fun-fact-block"> 
+                    <i class="pe-7s-icon pe-7s-coffee"></i>
+                    <h4>Coffee Consumed</h4>
+                    <span class="fun-value">200%</span>
+                  </div>
+                </div>
+              </div>
+              <!-- End of Fun fucts block -->
+            </section>
+            <!-- End of About Me Subpage -->
+
+            <!-- Resume Subpage -->
+            <section class="pt-page pt-page-2" data-id="resume">
+              <div class="section-title-block">
+                <h2 class="section-title">Resume</h2>
+                <h5 class="section-description">+2 Years of Experience</h5>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6 col-md-4 subpage-block">
+                  <div class="block-title">
+                    <h3>Education</h3>
+                  </div>
+                  <div class="timeline">
+                    <!-- Single event -->
+                    <div class="timeline-event te-primary">
+                      <h5 class="event-date">2015</h5>
+                      <h4 class="event-name">National Engineering diploma in computer science</h4>
+                      <span class="event-description">International Institute of Technology - North American Private University, IIT, Sfax</span>
+                      <p>Software Engineering and Business Intelligence.</p>
+                    </div>
+                    <!-- Single event -->
+                    <div class="timeline-event te-primary">
+                      <h5 class="event-date">2013</h5>
+                      <h4 class="event-name">Applied Master's diploma in Industrial Computing</h4>
+                      <span class="event-description">National School of Electronics and Telecommunications of Sfax - ENETCom</span>
+                      <p>Networks and Supervision.</p>
+                    </div>
+                    <!-- Single event -->
+                    <div class="timeline-event te-primary">
+                      <h5 class="event-date">2011</h5>
+                      <h4 class="event-name">Applied License Degree in Electronics, Electrotechnics and Automation</h4>
+                      <span class="event-description">University of Sciences of Sfax - FSS</span>
+                      <p>Electronics, Electrotechnics and Automation.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 subpage-block">
+                  <div class="block-title">
+                    <h3>Experience</h3>
+                  </div>
+                  <div class="timeline">
+                    <!-- Single event -->
+                    <div class="timeline-event te-primary">
+                      <h5 class="event-date">March 2017 - Current</h5>
+                      <h4 class="event-name">Founder & Manager</h4>
+                      <span class="event-description">IT-Skills Company</span>
+                      <p>Software Developer – Team Leader. Fullstack developer – JEE / angular and mobile development.</p>
+                    </div>
+                    <!-- Single event -->
+                    <div class="timeline-event te-primary">
+                      <h5 class="event-date">June 2015 - February 2017</h5>
+                      <h4 class="event-name">Software Developer</h4>
+                      <span class="event-description">Squeezer Software Company</span>
+                        <p>Mobile Development: Android, IOS, Material design, Firebase, push notification, recycleview, google calendar </p>
+                        <p>Software Development : J2EE, Tomcat7, Karaf, OSGI, bundle, Postgres DB, Hibernate, OpenJPA, JTA, Spring, Maven.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 subpage-block">
+                  
+                  <div class="block-title">
+                    <h3>Coding Skills</h3>
+                  </div>
+                  <div class="skills-info">
+                    <h4>Android</h4>                               
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-4"></div>
+                    </div>
+
+                    <h4>IOS</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-5"></div>
+                    </div>
+
+                    <h4>JEE</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-6"></div>
+                    </div>
+
+                    <h4>HML5 & CSS3</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-7"></div>
+                    </div>
+
+                    <h4>Angular</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-8"></div>
+                    </div>
+                  </div>
+
+                  <div class="block-title">
+                    <h3>Languages Skills</h3>
+                  </div>
+                  <div class="skills-info">
+                    <h4>Arabic</h4>                               
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-1"></div>
+                    </div>
+
+                    <h4>French</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-2"></div>
+                    </div>
+
+                    <h4>English</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-3"></div>
+                    </div> 
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12 col-md-12">
+                  <div class="download-cv-block">
+                    <a class="button" target="_blank" href="https://cv.adnenhamdouni.tn">Full Curriculum Vitae</a>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- End Resume Subpage -->
+
+
+            <!-- Portfolio Subpage -->
+            <section class="pt-page pt-page-3" data-id="portfolio">
+              <div class="section-title-block">
+                <h2 class="section-title">Portfolio</h2>
+                <h5 class="section-description">My Best Works</h5>
+              </div>
+
+              <!-- Portfolio Content -->
+              <div class="portfolio-content">
+                            
+                <!-- Portfolio filter -->
+                <ul id="portfolio_filters" class="portfolio-filters">
+                  <li class="active">
+                    <a class="filter btn btn-sm btn-link active" data-group="all">All</a>
+                  </li>
+                  <li>
+                    <a class="filter btn btn-sm btn-link" data-group="media">Mobile</a>
+                  </li>
+                  <li>
+                    <a class="filter btn btn-sm btn-link" data-group="illustration">Web</a>
+                  </li>
+                  <li>
+                    <a class="filter btn btn-sm btn-link" data-group="video">Video</a>
+                  </li>
+                </ul>
+                <!-- End of Portfolio filter -->
+
+                <!-- Portfolio Grid -->
+                <div id="portfolio_grid" class="portfolio-grid portfolio-masonry masonry-grid-3">
+
+                  <!-- Portfolio Item 1 -->
+                  <figure class="item" data-groups='["all", "mobile"]'>
+                    <a class="ajax-page-load" href="portfolio-1.html">
+                      <img src="assets/images/portfolio/project-1.0.jpg" alt="">
+                      <div>
+                        <h5 class="name">audioguide dresden neustadt</h5>
+                        <small>Mobile</small>
+                        <i class="fa fa-file-text-o"></i>
+                      </div>
+                    </a>
+                  </figure>
+                  <!-- /Portfolio Item 1 -->
+
+                </div>
+                <!-- /Portfolio Grid -->
+
+              </div>
+              <!-- /Portfolio Content -->
+
+            </section>
+            <!-- /Portfolio Subpage -->
+
+            <!-- Blog Subpage -->
+            <section class="pt-page pt-page-4" data-id="blog">
+              <div class="section-title-block">
+                <h2 class="section-title">Blog</h2>
+                <h5 class="section-description">My Diary</h5>
+              </div>
+              <div class="blog-masonry">
+                <!-- Blog Post 1 -->
+                <div class="item">
+                  <div class="blog-card">
+                    <div class="media-block">
+                      <a href="">
+                        <img class="post-image img-responsive" src="assets/images/blog/blog_post_1.jpg" alt="" />
+                        <div class="mask"></div>
+                        <div class="post-date"><span class="day">6</span><span class="month">Dec</span><!--<span class="year">2016</span>--></div>
+                      </a>
+                    </div>
+                    <div class="post-info">
+                      <ul class="category">
+                        <li><a href="#">Technology</a></li>
+                      </ul>
+                      <a href=""><h4 class="blog-item-title">Bootstrap is the Most Popular Framework</h4></a>
+                    </div>
+                  </div>
+                </div>
+                <!-- End of Blog Post 1 -->
+              </div>
+            </section>
+            <!-- End Blog Subpage -->
+
+            <!-- Contact Subpage -->
+            <section class="pt-page pt-page-5" data-id="contact">
+              <div class="section-title-block">
+                <h2 class="section-title">Contact</h2>
+                <h5 class="section-description">Get in Touch</h5>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6 col-md-6 subpage-block">
+                  <div class="block-title">
+                    <h3>Get in Touch</h3>
+                  </div>
+                  <p>We would be pleased to discuss with you.</p>
+                  <div class="contact-info-block">
+                    <div class="ci-icon">
+                      <i class="pe-7s-icon pe-7s-map-marker"></i>
+                    </div>
+                    <div class="ci-text">
+                      <h5>Sfax, TUNISIA</h5>
+                    </div>
+                  </div>
+                  <div class="contact-info-block">
+                    <div class="ci-icon">
+                      <i class="pe-7s-icon pe-7s-mail"></i>
+                    </div>
+                    <div class="ci-text">
+                      <h5>me@adnenhamdouni.tn</h5>
+                    </div>
+                  </div>
+                  <div class="contact-info-block">
+                    <div class="ci-icon">
+                      <i class="pe-7s-icon pe-7s-call"></i>
+                    </div>
+                    <div class="ci-text">
+                      <h5>+216 22 425 893</h5>
+                    </div>
+                  </div>
+                  <div class="contact-info-block">
+                    <div class="ci-icon">
+                      <i class="pe-7s-icon pe-7s-check"></i>
+                    </div>
+                    <div class="ci-text">
+                      <h5>Freelance Available</h5>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-6 subpage-block">
+                  <div class="block-title">
+                    <h3>Contact Form</h3>
+                  </div>
+                  <form id="contact-form" method="post" action="">
+
+                    <div class="messages"></div>
+
+                    <div class="controls">
+                      <div class="form-group">
+                          <input id="form_name" type="text" name="name" class="form-control" placeholder="Full Name" required="required" data-error="Name is required.">
+                          <div class="form-control-border"></div>
+                          <i class="form-control-icon fa fa-user"></i>
+                          <div class="help-block with-errors"></div>
+                      </div>
+
+                      <div class="form-group">
+                          <input id="form_email" type="email" name="email" class="form-control" placeholder="Email Address" required="required" data-error="Valid email is required.">
+                          <div class="form-control-border"></div>
+                          <i class="form-control-icon fa fa-envelope"></i>
+                          <div class="help-block with-errors"></div>
+                      </div>
+
+                      <div class="form-group">
+                          <textarea id="form_message" name="message" class="form-control" placeholder="Message for me" rows="4" required="required" data-error="Please, leave me a message."></textarea>
+                          <div class="form-control-border"></div>
+                          <i class="form-control-icon fa fa-comment"></i>
+                          <div class="help-block with-errors"></div>
+                      </div>
+                      
+                      <div class="g-recaptcha" data-sitekey="6LdqmCAUAAAAAMMNEZvn6g4W5e0or2sZmAVpxVqI" data-callback="correctCaptcha"></div>
+
+                      <input type="submit" class="button btn-send" value="Send message">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </section>
+            <!-- End Contact Subpage -->
+
+          </div>
+        </div>
+        <!-- /Page changer wrapper -->
+      </div>
+      <!-- /Main Content -->
+    </div>
+
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/page-transition.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/validator.js"></script>
+    <script src="assets/js/jquery.shuffle.min.js"></script>
+    <script src="assets/js/masonry.pkgd.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.hoverdir.js"></script>
+    <script src="assets/js/main.js"></script>
+
+  </body>
+
 </html>
+
