@@ -4,6 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --proxy-config=proxy.conf.json",
+    "start:dev": "ng serve -c=dev --port=4201",
+    "start:qa": "ng serve -c=qa --port=4202",
     "build": "ng build --prod",
     "postbuild": "npm run deploy",
     "predeploy": "rimraf ../whataboutme/src/main/resources/static/ && mkdirp ../whataboutme/src/main/resources/static/",

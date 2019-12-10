@@ -26,6 +26,11 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-# deploy - copy files generated to backend (Spring boot)
+# Deploy - copy files generated to backend (Spring boot)
 
 `npm run deploy`
+
+# Run with specific profile / by environment
+
+`npm run start:dev`
+`npm run start:qa --aot` // will run qa configuration using AOT mode
