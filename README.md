@@ -1,4 +1,7 @@
-# Whataboutme
+# MyCv
+
+FrontEnd - Angular 12
+BackEnd  - NodeJS
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.
 
