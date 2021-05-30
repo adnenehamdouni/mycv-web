@@ -1,5 +1,5 @@
 {
-  "name": "whataboutme",
+  "name": "mycv",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,8 +8,8 @@
     "start:qa": "ng serve -c=qa --port=4202 --proxy-config=proxy/qa-proxy.conf.json",
     "build": "ng build --prod",
     "postbuild": "npm run deploy",
-    "predeploy": "rimraf ../whataboutme/src/main/resources/static/ && mkdirp ../whataboutme/src/main/resources/static/",
-    "deploy": "copyfiles -f dist/whataboutme/** ../whataboutme/src/main/resources/static/",
+    "predeploy": "rimraf ../mycv/src/main/resources/static/ && mkdirp ../mycv/src/main/resources/static/",
+    "deploy": "copyfiles -f dist/mycv/** ../mycv/src/main/resources/static/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
