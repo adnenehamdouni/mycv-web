@@ -1,677 +1,792 @@
-<!--<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Whataboutme</title>
-    <base href="." />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  </head>
-  <body>
-    <app-root></app-root>
-  </body>
-</html>-->
-
 <!DOCTYPE html>
-<html lang="en" class="no-js"
-      xmlns:th="http://www.thymeleaf.org">
-  
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <title>Whataboutme</title>
-    <base href="." />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Adnen HAMDOUNI - portfolio" />
-    <meta name="keywords" content="mobile, web, development, resume, jquery, css3, bootstrap, angular, jee, spring boot, portfolio" />
-    <meta name="author" content="Adnen HAMDOUNI" />
-    <link rel="shortcut icon" href="favicon.ico">
+  <meta charset="utf-8" />
+  <title>Whataboutme</title>
+  <base href="." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/transition-animations.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/css/main.css" type="text/css">
-    
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','','ga');
-      //})(window,document,'script','../../../../../www.google-analytics.com/analytics.js','ga');
+  <!-- -->
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Maha Personal cv/resume template for professional and personal website." />
+  <meta name="keywords" content="creative, cv, designer,  online cv, online resume, powerful portfolio, professional, professional resume, responsive, resume, vcard " />
+  <meta name="developer" content="Md. Siful Islam">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-      ga('create', 'UA-92992662-1', 'auto');
-      ga('send', 'pageview');
+  <!-- FAV AND ICONS   -->
+  <link rel="shortcut icon" href="assets/images/favicon.ico">
+  <link rel="shortcut icon" href="assets/images/apple-icon.png">
+  <link rel="shortcut icon" sizes="72x72" href="assets/images/apple-icon-72x72.png">
+  <link rel="shortcut icon" sizes="114x114" href="assets/images/apple-icon-114x114.png">
 
-    </script>
+  <!-- Google Font-->
+  <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="assets/icons/font-awesome-4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="assets/plugins/css/bootstrap.min.css">
+  <!-- Animate CSS-->
+  <link rel="stylesheet" href="assets/plugins/css/animate.css">
+  <!-- Owl Carousel CSS-->
+  <link rel="stylesheet" href="assets/plugins/css/owl.css">
+  <!-- Fancybox-->
+  <link rel="stylesheet" href="assets/plugins/css/jquery.fancybox.min.css">
+  <!-- Custom CSS-->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
 
-    <!-- This styles needs for demo -->
-    <link rel="stylesheet" href="assets/preview/lmpixels-demo-panel.css" type="text/css">
-    <!-- /This styles needs for demo -->
+  <!-- Colors -->
+  <link rel="alternate stylesheet" href="assets/css/colors/blue.css" title="blue">
+  <link rel="stylesheet" href="assets/css/colors/defauld.css" title="defauld">
+  <link rel="alternate stylesheet" href="assets/css/colors/green.css" title="green">
+  <link rel="alternate stylesheet" href="assets/css/colors/blue-munsell.css" title="blue-munsell">
+  <link rel="alternate stylesheet" href="assets/css/colors/orange.css" title="orange">
+  <link rel="alternate stylesheet" href="assets/css/colors/purple.css" title="purple">
+  <link rel="alternate stylesheet" href="assets/css/colors/slate.css" title="slate">
+  <link rel="alternate stylesheet" href="assets/css/colors/yellow.css" title="yellow">
+</head>
+<body class="dark-vertion black-bg">
+  <!-- Start Loader -->
+  <div class="section-loader">
+    <div class="loader">
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- End Loader -->
 
-    <script src="assets/js/jquery-2.1.3.min.js"></script>
-    <script src="assets/js/modernizr.custom.js"></script>
-    
-    <!--<script src='../../../../../www.google.com/recaptcha/api.js'></script>-->
-  </head>
 
-  <body>
-    <!-- Loading animation -->
-    <div class="preloader">
-      <div class="preloader-animation">
-        <div class="dot1"></div>
-        <div class="dot2"></div>
+
+  <!--
+  ===================
+      HOME
+  ===================
+  -->
+  <section class="mh-home" id="mh-home">
+    <div class="home-ovimg">
+      <div class="container">
+        <div class="row xs-column-reverse section-separator vertical-middle-content home-padding">
+          <div class="col-sm-6">
+            <div class="mh-header-info">
+              <div class="mh-promo wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
+                <span>Hello I'm</span>
+              </div>
+
+              <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Alex Johnson</h2>
+              <h4 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">Product Designer</h4>
+
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                It has survived not only five centuries, but also the leap into electronic typesetting
+              </p>
+              <ul class="social-icon wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
+                <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                <li><a href=""><i class="fa fa-github"></i></a></li>
+                <li><a href=""><i class="fa fa-dribbble"></i></a></li>
+                <li><a href=""><i class="fa fa-envelope-o"></i></a></li>
+                <li><a href=""><i class="fa fa-download"></i></a></li>
+              </ul>
+
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="hero-img wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
+              <div class="img-border">
+                <img src="assets/images/hero.png" alt=""  class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- /Loading animation -->
+  </section>
 
-    <div id="page" class="page">
-      <!-- Header -->
-      <header id="site_header" class="header">
-        <div class="my-photo">
-          <img src="assets/images/my_photo.jpg" alt="image">
-          <div class="mask"></div>
-        </div>
-
-        <div class="site-title-block">
-          <h1 class="site-title">Adnen HAMDOUNI</h1>
-          <p class="site-description">JavaEE / Angular developer</p>
-        </div>
-
-        <a class="menu-toggle mobile-visible">
-          <i class="fa fa-bars"></i>
-        </a>
-      </header>
-      <!-- /Header -->
-
-      <!-- Main Content -->
-      <div id="main" class="site-main">
-        <!-- Page changer wrapper -->
-        <div class="pt-wrapper">
-          <!-- Navigation & Social buttons -->
-          <div class="site-nav mobile-menu-hide">
-            <!-- Main menu -->
-            <ul id="nav" class="site-main-menu">
-              <!-- About Me Subpage link -->
-              <li>
-                <a class="pt-trigger" href="#about_me" data-animation="58" data-goto="1">About me</a><!-- href value = data-id without # of .pt-page -->
-              </li>
-              <!-- /About Me Subpage link -->
-              <li>
-                <a class="pt-trigger" href="#resume" data-animation="59" data-goto="2">Resume</a>
-              </li>
-              <li>
-                <a class="pt-trigger" href="#portfolio" data-animation="60" data-goto="3">Portfolio</a>
-              </li>
-              <li>
-                <a class="pt-trigger" href="#blog" data-animation="61" data-goto="4">Blog</a>
-              </li>
-              <li>
-                <a class="pt-trigger" href="#contact" data-animation="58" data-goto="5">Contact</a>
-              </li>
-            </ul>
-            <!-- /Main menu -->
-
-            <!-- Social buttons -->
-            <ul class="social-links">
-              <li><a class="tip social-button" href="https://twitter.com/hamdouniadnen" title="Twitter"><i class="fa fa-twitter"></i></a></li> <!-- Full list of social icons: http://fontawesome.io/icons/#brand -->
-              <li><a class="tip social-button" href="https://www.facebook.com/AdnenHamdouni/" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-              <li><a class="tip social-button" href="https://plus.google.com/u/0/+AdnenHamdounii" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
-              <!--<li><a class="tip social-button" href="#" title="Youtube"><i class="fa fa-youtube"></i></a></li>-->
-              <!--<li><a class="tip social-button" href="#" title="last.fm"><i class="fa fa-lastfm"></i></a></li>-->
-              <!--<li><a class="tip social-button" href="#" title="Dribbble"><i class="fa fa-dribbble"></i></a></li>-->
-            </ul>
-            <!-- /Social buttons -->
+  <!--
+  ==================
+      ABOUT
+  =================
+  -->
+  <section class="mh-about" id="mh-about">
+    <div class="container">
+      <div class="row section-separator">
+        <div class="col-sm-12 col-md-6">
+          <div class="mh-about-img shadow-2 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
+            <img src="assets/images/ab-img.png" alt="" class="img-fluid">
           </div>
-          <!-- Navigation & Social buttons -->
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <div class="mh-about-inner">
+            <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">About Me</h2>
+            <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Hello, I’m a Patrick, web-developer based on Paris.
+              I have rich experience in web site design & building
+              and customization. Also I am good at</p>
+            <div class="mh-about-tag wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+              <ul>
+                <li><span>php</span></li>
+                <li><span>html</span></li>
+                <li><span>css</span></li>
+                <li><span>php</span></li>
+                <li><span>wordpress</span></li>
+                <li><span>React</span></li>
+                <li><span>Javascript</span></li>
+              </ul>
+            </div>
+            <a href="" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">Downlaod CV <i class="fa fa-download"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-          <!-- Subpages -->
-          <div class="subpages">
-            <!-- About Me Subpage -->
-            <section class="pt-page pt-page-1" data-id="about_me">
-              <div class="section-title-block">
-                <h2 class="section-title">About Me</h2>
-                <h5 class="section-description">Java / Angular developer</h5>
-              </div>
+  <!--
+  ===================
+     SERVICE
+  ===================
+  -->
+  <section class="mh-service">
+    <div class="container">
+      <div class="row section-separator">
+        <div class="col-sm-12 text-center section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+          <h3>What I do</h3>
+        </div>
+        <div class="col-sm-4">
+          <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+            <i class="fa fa-bullseye purple-color"></i>
+            <h3>UI Design</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+              sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+              magna aliquam erat volutpat.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
+            <i class="fa fa-code iron-color"></i>
+            <h3>Web Development</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+              sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+              magna aliquam erat volutpat.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
+            <i class="fa fa-object-ungroup sky-color"></i>
+            <h3>App Development</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+              sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+              magna aliquam erat volutpat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-              <div class="row">
-                <div class="col-sm-12 col-md-12 mobile-visible subpage-block">
-                  <div class="my-photo-small">
-                    <img src="assets/images/my_photo.jpg" alt="image">
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-6 subpage-block">
-                  <div class="general-info">
-                    <h3>I am JavaEE / Angular & Mobile Developer </h3>
-                    <p>I am a software developer from Sfax (Tunisia). I love everything that is related to JEE (Spring Boot) mobile development, web programming (angular) and embedded systems. Specializing in software development, computer engineering graduate with experience developing innovative and creative software solutions. I'm an enthusiastic software developer who has a long history of development, implementation and software tested to meet specific project requirements. Also passionate about mobile development especially on the Android platform.</p>
-                    <p>I attended many challenges and Hackathons to brush up my skills and enjoy this wonderful green world. Now, I’m stepping forward to the other side to start sharing my knowledge with others to communicate to them the passion and good practices of development.</p>
-                  </div>
-                </div>
-
-                <!--<div class="col-sm-4 col-md-4 subpage-block">
-                  <div class="block end">
-                    <ul class="info-list">
-                      <li><span class="title">Name</span><span class="value">Alex Smith</span></li>
-                      <li><span class="title">Age</span><span class="value">29</span></li>
-                      <li><span class="title">Address</span><span class="value">88 Street - State, Town</span></li>
-                      <li><span class="title">e-mail</span><span class="value"><a href="mailto:email@addres.com">email@addres.com</a></span></li>
-                      <li><span class="title">Phone</span><span class="value">+0123 123 456 789</span></li>
-                      <li><span class="title">Freelance</span><span class="value available">Available</span></li>
-                    </ul>
-                  </div>
-                </div>-->
-
-                <div class="col-sm-6 col-md-6 subpage-block">
-                  <div class="block-title">
-                    <h3>Testimonials</h3>
-                  </div>
-                  <div class="testimonials owl-carousel">
-
-                    <!-- Testimonial 1 -->
-                    <div class="testimonial-item">
-                      <!-- Testimonial Content -->
-                      <div class="testimonial-content">
-                        <div class="testimonial-text">
-                          <p>"We really appreciated working together. Our Android Application, which was the lead developer in our Android audioguide project. He is an expert in Android programming and design, the collaboration was very professional and we got always instant replies when we needed any changes in the app. The level of service was amazing and the delivery always on time. It was a pleasure to work together."</p>
-                        </div>
-                      </div>            
-                      <!-- /Testimonial Content -->  
-                      <!-- Testimonial Author -->
-                      <div class="testimonial-credits">
-                        <!-- Picture -->
-                        <div class="testimonial-picture">
-                          <img src="assets/images/testimonials/testimonial_photo_1.png" alt="">
-                        </div>              
-                        <!-- /Picture -->
-                        <!-- Testimonial author information -->
-                        <div class="testimonial-author-info">
-                          <p class="testimonial-author">Michael Brey</p>
-                          <p class="testimonial-firm">ostmodern.com</p>
-                        </div>
-                      </div>
-                      <!-- /Testimonial author information -->               
+  <!--
+  ===================
+     SKILLS
+  ===================
+  -->
+  <section class="mh-skills" id="mh-skills">
+    <div class="container">
+      <div class="row section-separator">
+        <div class="section-title text-center col-sm-12">
+          <!--<h2>Skills</h2>-->
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <div class="mh-skills-inner">
+            <div class="mh-professional-skill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+              <h3>Technical Skills</h3>
+              <div class="each-skills">
+                <div class="candidatos">
+                  <div class="parcial">
+                    <div class="info">
+                      <div class="nome">Javascript</div>
+                      <div class="percentagem-num">86%</div>
                     </div>
-                    <!-- End of Testimonial 1 -->
-
-                    <!-- Testimonial 2 -->
-                    <div class="testimonial-item">
-                      <!-- Testimonial Content -->
-                      <div class="testimonial-content">
-                        <div class="testimonial-text">
-                          <p>"We really appreciated working together. Our Android Application, which was the lead developer in our Android audioguide project. He is an expert in Android programming and design, the collaboration was very professional and we got always instant replies when we needed any changes in the app. The level of service was amazing and the delivery always on time. It was a pleasure to work together."</p>
-                        </div>
-                      </div>            
-                      <!-- /Testimonial Content -->  
-                      <!-- Testimonial Author -->
-                      <div class="testimonial-credits">
-                        <!-- Picture -->
-                        <div class="testimonial-picture">
-                          <img src="assets/images/testimonials/testimonial_photo_1.png" alt="">
-                        </div>              
-                        <!-- /Picture -->
-                        <!-- Testimonial author information -->
-                        <div class="testimonial-author-info">
-                          <p class="testimonial-author">Michael Brey</p>
-                          <p class="testimonial-firm">ostmodern.com</p>
-                        </div>
-                      </div>
-                      <!-- /Testimonial author information -->               
-                    </div>
-                    <!-- End of Testimonial 2 -->
-                  </div>
-                </div>
-              </div>
-
-              <!-- Services block -->
-              <div class="block-title">
-                <h3>Services</h3>
-              </div>
-
-              <div class="row">
-                <div class="col-sm-6 col-md-3 subpage-block">
-                  <div class="service-block"> 
-                    <div class="service-info">
-                      <img src="assets/images/service/web_design.png" alt="Responsive Design">
-                      <h4>Web and mobile development</h4>
-                      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>-->
+                    <div class="progressBar">
+                      <div class="percentagem" style="width: 86%;"></div>
                     </div>
                   </div>
                 </div>
-
-                <div class="col-sm-6 col-md-3 subpage-block">
-                  <div class="service-block"> 
-                    <div class="service-info">
-                      <img src="assets/images/service/copywrite.png" alt="Copywriter">
-                      <h4>Consulting</h4>
-                      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>-->
+                <div class="candidatos">
+                  <div class="parcial">
+                    <div class="info">
+                      <div class="nome">Java</div>
+                      <div class="percentagem-num">46%</div>
+                    </div>
+                    <div class="progressBar">
+                      <div class="percentagem" style="width: 46%;"></div>
                     </div>
                   </div>
                 </div>
-
-                <div class="col-sm-6 col-md-3 subpage-block">
-                  <div class="service-block"> 
-                    <div class="service-info">
-                      <img src="assets/images/service/ecommerce.png" alt="E-Commerce">
-                      <h4>Freelance</h4>
-                      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>-->
+                <div class="candidatos">
+                  <div class="parcial">
+                    <div class="info">
+                      <div class="nome">Python</div>
+                      <div class="percentagem-num">38%</div>
+                    </div>
+                    <div class="progressBar">
+                      <div class="percentagem" style="width: 38%;"></div>
                     </div>
                   </div>
                 </div>
-
-                <div class="col-sm-6 col-md-3 subpage-block">
-                  <div class="service-block"> 
-                    <div class="service-info">
-                      <img src="images/service/management.png" alt="Management">
-                      <h4>Management</h4>
-                      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>-->
+                <div class="candidatos">
+                  <div class="parcial">
+                    <div class="info">
+                      <div class="nome">PHP</div>
+                      <div class="percentagem-num">17%</div>
+                    </div>
+                    <div class="progressBar">
+                      <div class="percentagem" style="width: 17%;"></div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <!-- End of Services block -->
-
-              <!-- Clients block -->
-              <!--<div class="block-title">
-                <h3>Clients</h3>
-              </div>
-
-              <div class="row">
-                <div class="col-sm-4 col-md-2 subpage-block">
-                  <div class="client_block">
-                    <a href="#" target="_blank"><img src="images/clients/client_1.png" alt="image"></a>
-                  </div>
-                </div>
-
-                <div class="col-sm-4 col-md-2 subpage-block">
-                  <div class="client_block">
-                    <a href="#" target="_blank"><img src="images/clients/client_2.png" alt="image"></a>
-                  </div>
-                </div>
-
-                <div class="col-sm-4 col-md-2 subpage-block">
-                  <div class="client_block">
-                    <a href="#" target="_blank"><img src="images/clients/client_3.png" alt="image"></a>
-                  </div>
-                </div>
-
-                <div class="col-sm-4 col-md-2 subpage-block">
-                  <div class="client_block">
-                    <a href="#" target="_blank"><img src="images/clients/client_4.png" alt="image"></a>
-                  </div>
-                </div>
-
-                <div class="col-sm-4 col-md-2 subpage-block">
-                  <div class="client_block">
-                    <a href="#" target="_blank"><img src="images/clients/client_5.png" alt="image"></a>
-                  </div>
-                </div>
-
-                <div class="col-sm-4 col-md-2 subpage-block">
-                  <div class="client_block">
-                    <a href="#" target="_blank"><img src="images/clients/client_6.png" alt="image"></a>
-                  </div>
-                </div>
-              </div>-->
-              <!-- End of Clients block -->
-
-              <!-- Fun facts block -->
-              <div class="block-title">
-                <h3>Fun Facts</h3>
-              </div>
-
-              <div class="row">
-                <div class="col-sm-6 col-md-3 subpage-block">
-                  <div class="fun-fact-block gray-bg"> 
-                    <i class="pe-7s-icon pe-7s-smile"></i>
-                    <h4>Happy Clients</h4>
-                    <span class="fun-value">4</span>
-                  </div>
-                </div>
-
-                <div class="col-sm-6 col-md-3 subpage-block">
-                  <div class="fun-fact-block"> 
-                    <i class="pe-7s-icon pe-7s-alarm"></i>
-                    <h4>Working Hours</h4>
-                    <span class="fun-value">24/24</span>
-                  </div>
-                </div>
-
-                <div class="col-sm-6 col-md-3 subpage-block">
-                  <div class="fun-fact-block gray-bg"> 
-                    <i class="pe-7s-icon pe-7s-medal"></i>
-                    <h4>Training Session</h4>
-                    <span class="fun-value">10</span>
-                  </div>
-                </div>
-
-                <div class="col-sm-6 col-md-3 subpage-block">
-                  <div class="fun-fact-block"> 
-                    <i class="pe-7s-icon pe-7s-coffee"></i>
-                    <h4>Coffee Consumed</h4>
-                    <span class="fun-value">200%</span>
+                <div class="candidatos">
+                  <div class="parcial">
+                    <div class="info">
+                      <div class="nome">PHP</div>
+                      <div class="percentagem-num">17%</div>
+                    </div>
+                    <div class="progressBar">
+                      <div class="percentagem" style="width: 17%;"></div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- End of Fun fucts block -->
-            </section>
-            <!-- End of About Me Subpage -->
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <div class="mh-professional-skills wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
+            <h3>Professional Skills</h3>
+            <ul class="mh-professional-progress" >
+              <li>
+                <div class="mh-progress mh-progress-circle" data-progress="95"></div>
+                <div class="pr-skill-name">Communication</div>
+              </li>
+              <li>
+                <div class="mh-progress mh-progress-circle" data-progress="55"></div>
+                <div class="pr-skill-name">Team Work</div>
+              </li>
+              <li>
+                <div class="mh-progress mh-progress-circle" data-progress="86"></div>
+                <div class="pr-skill-name">Project Management</div>
+              </li>
+              <li>
+                <div class="mh-progress mh-progress-circle" data-progress="60"></div>
+                <div class="pr-skill-name">Creativity</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <!-- Resume Subpage -->
-            <section class="pt-page pt-page-2" data-id="resume">
-              <div class="section-title-block">
-                <h2 class="section-title">Resume</h2>
-                <h5 class="section-description">+2 Years of Experience</h5>
-              </div>
-
-              <div class="row">
-                <div class="col-sm-6 col-md-4 subpage-block">
-                  <div class="block-title">
-                    <h3>Education</h3>
-                  </div>
-                  <div class="timeline">
-                    <!-- Single event -->
-                    <div class="timeline-event te-primary">
-                      <h5 class="event-date">2015</h5>
-                      <h4 class="event-name">National Engineering diploma in computer science</h4>
-                      <span class="event-description">International Institute of Technology - North American Private University, IIT, Sfax</span>
-                      <p>Software Engineering and Business Intelligence.</p>
-                    </div>
-                    <!-- Single event -->
-                    <div class="timeline-event te-primary">
-                      <h5 class="event-date">2013</h5>
-                      <h4 class="event-name">Applied Master's diploma in Industrial Computing</h4>
-                      <span class="event-description">National School of Electronics and Telecommunications of Sfax - ENETCom</span>
-                      <p>Networks and Supervision.</p>
-                    </div>
-                    <!-- Single event -->
-                    <div class="timeline-event te-primary">
-                      <h5 class="event-date">2011</h5>
-                      <h4 class="event-name">Applied License Degree in Electronics, Electrotechnics and Automation</h4>
-                      <span class="event-description">University of Sciences of Sfax - FSS</span>
-                      <p>Electronics, Electrotechnics and Automation.</p>
-                    </div>
-                  </div>
+  <!--
+  ===================
+     EXPERIENCES
+  ===================
+  -->
+  <section class="mh-experince" id="mh-experience">
+    <div class="bolor-overlay">
+      <div class="container">
+        <div class="row section-separator">
+          <div class="col-sm-12 col-md-6">
+            <div class="mh-education">
+              <h3 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Education</h3>
+              <div class="mh-education-deatils">
+                <!-- Education Institutes-->
+                <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                  <h4>Art & Multimedia From <a href="">Oxford University</a></h4>
+                  <div class="mh-eduyear">2005-2008</div>
+                  <p>It is a long established fact that a reader will be distracted by the readable content of a
+                    page when looking at its layout. The point of using  Lorem Ipsum </p>
                 </div>
-
-                <div class="col-sm-6 col-md-4 subpage-block">
-                  <div class="block-title">
-                    <h3>Experience</h3>
-                  </div>
-                  <div class="timeline">
-                    <!-- Single event -->
-                    <div class="timeline-event te-primary">
-                      <h5 class="event-date">March 2017 - Current</h5>
-                      <h4 class="event-name">Founder & Manager</h4>
-                      <span class="event-description">IT-Skills Company</span>
-                      <p>Software Developer – Team Leader. Fullstack developer – JEE / angular and mobile development.</p>
-                    </div>
-                    <!-- Single event -->
-                    <div class="timeline-event te-primary">
-                      <h5 class="event-date">June 2015 - February 2017</h5>
-                      <h4 class="event-name">Software Developer</h4>
-                      <span class="event-description">Squeezer Software Company</span>
-                        <p>Mobile Development: Android, IOS, Material design, Firebase, push notification, recycleview, google calendar </p>
-                        <p>Software Development : J2EE, Tomcat7, Karaf, OSGI, bundle, Postgres DB, Hibernate, OpenJPA, JTA, Spring, Maven.</p>
-                    </div>
-                  </div>
+                <!-- Education Institutes-->
+                <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
+                  <h4>Art & Multimedia From <a href="">Oxford University</a></h4>
+                  <div class="mh-eduyear">2005-2008</div>
+                  <p>It is a long established fact that a reader will be distracted by the readable content of a
+                    page when looking at its layout. The point of using  Lorem Ipsum </p>
                 </div>
-
-                <div class="col-sm-6 col-md-4 subpage-block">
-                  
-                  <div class="block-title">
-                    <h3>Coding Skills</h3>
-                  </div>
-                  <div class="skills-info">
-                    <h4>Android</h4>                               
-                    <div class="skill-container">
-                      <div class="skill-percentage skill-4"></div>
-                    </div>
-
-                    <h4>IOS</h4>
-                    <div class="skill-container">
-                      <div class="skill-percentage skill-5"></div>
-                    </div>
-
-                    <h4>JEE</h4>
-                    <div class="skill-container">
-                      <div class="skill-percentage skill-6"></div>
-                    </div>
-
-                    <h4>HML5 & CSS3</h4>
-                    <div class="skill-container">
-                      <div class="skill-percentage skill-7"></div>
-                    </div>
-
-                    <h4>Angular</h4>
-                    <div class="skill-container">
-                      <div class="skill-percentage skill-8"></div>
-                    </div>
-                  </div>
-
-                  <div class="block-title">
-                    <h3>Languages Skills</h3>
-                  </div>
-                  <div class="skills-info">
-                    <h4>Arabic</h4>                               
-                    <div class="skill-container">
-                      <div class="skill-percentage skill-1"></div>
-                    </div>
-
-                    <h4>French</h4>
-                    <div class="skill-container">
-                      <div class="skill-percentage skill-2"></div>
-                    </div>
-
-                    <h4>English</h4>
-                    <div class="skill-container">
-                      <div class="skill-percentage skill-3"></div>
-                    </div> 
-                  </div>
+                <!-- Education Institutes-->
+                <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
+                  <h4>Art & Multimedia From <a href="">Oxford University</a></h4>
+                  <div class="mh-eduyear">2005-2008</div>
+                  <p>It is a long established fact that a reader will be distracted by the readable content of a
+                    page when looking at its layout. The point of using L orem Ipsum </p>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-sm-12 col-md-12">
-                  <div class="download-cv-block">
-                    <a class="button" target="_blank" href="https://cv.adnenhamdouni.tn">Full Curriculum Vitae</a>
-                  </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <div class="mh-work">
+              <h3>Work Experience</h3>
+              <div class="mh-experience-deatils">
+                <!-- Education Institutes-->
+                <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
+                  <h4>UI/UX Designer <a href="">IronSketch</a></h4>
+                  <div class="mh-eduyear">2005-2008</div>
+                  <span>Responsibility :</span>
+                  <ul class="work-responsibility">
+                    <li><i class="fa fa-circle"></i>Validate CSS</li>
+                    <li><i class="fa fa-circle"></i>Project Management</li>
+                  </ul>
+                </div>
+                <!-- Education Institutes-->
+                <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
+                  <h4>Art & Multimedia From <a href="">Oxford University</a></h4>
+                  <div class="mh-eduyear">2005-2008</div>
+                  <span>Responsibility :</span>
+                  <ul class="work-responsibility">
+                    <li><i class="fa fa-circle"></i>Validate CSS</li>
+                    <li><i class="fa fa-circle"></i>Project Management</li>
+                  </ul>
+                </div>
+                <!-- Education Institutes-->
+                <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
+                  <h4>Art & Multimedia From <a href="">Oxford University</a></h4>
+                  <div class="mh-eduyear">2005-2008</div>
+                  <span>Responsibility :</span>
+                  <ul class="work-responsibility">
+                    <li><i class="fa fa-circle"></i>Validate CSS</li>
+                    <li><i class="fa fa-circle"></i>Project Management</li>
+                  </ul>
                 </div>
               </div>
-            </section>
-            <!-- End Resume Subpage -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-
-            <!-- Portfolio Subpage -->
-            <section class="pt-page pt-page-3" data-id="portfolio">
-              <div class="section-title-block">
-                <h2 class="section-title">Portfolio</h2>
-                <h5 class="section-description">My Best Works</h5>
+  <!--
+  ===================
+     PORTFOLIO
+  ===================
+  -->
+  <section class="mh-portfolio" id="mh-portfolio">
+    <div class="container">
+      <div class="row section-separator">
+        <div class="section-title col-sm-12 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
+          <h3>Recent Portfolio</h3>
+        </div>
+        <div class="part col-sm-12">
+          <div class="portfolio-nav col-sm-12" id="filter-button">
+            <ul>
+              <li data-filter="*" class="current wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s"> <span>All Categories</span></li>
+              <li data-filter=".user-interface" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s"><span>Web Design</span></li>
+              <li data-filter=".branding" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s"><span>Branding</span></li>
+              <li data-filter=".mockup" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s"><span>Mockups</span></li>
+              <li data-filter=".ui" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s"><span>Photography</span></li>
+            </ul>
+          </div>
+          <div class="mh-project-gallery col-sm-12 wow fadeInUp" id="project-gallery" data-wow-duration="0.8s" data-wow-delay="0.5s">
+            <div class="portfolioContainer row">
+              <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface">
+                <figure>
+                  <img src="assets/images/portfolio/g1.jpg" alt="img04">
+                  <figcaption class="fig-caption">
+                    <i class="fa fa-search"></i>
+                    <h5 class="title">Creative Design</h5>
+                    <span class="sub-title">Photograpy</span>
+                    <a data-fancybox data-src="#mh"></a>
+                  </figcaption>
+                </figure>
               </div>
+              <div class="grid-item col-md-4 col-sm-6 col-xs-12 ui mockup">
+                <figure>
+                  <img src="assets/images/portfolio/g2.png" alt="img04">
+                  <figcaption class="fig-caption">
+                    <i class="fa fa-search"></i>
+                    <h5 class="title">Creative Design</h5>
+                    <span class="sub-title">Photograpy</span>
+                    <a href="assets/images/portfolio/g2.png" data-fancybox data-src="#mh"></a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface">
+                <figure>
+                  <img src="assets/images/portfolio/g3.png" alt="img04">
+                  <figcaption class="fig-caption">
+                    <i class="fa fa-search"></i>
+                    <h5 class="title">Creative Design</h5>
+                    <span class="sub-title">Photograpy</span>
+                    <a href="assets/images/portfolio/g3.png" data-fancybox data-src="#mh"></a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding">
+                <figure>
+                  <img src="assets/images/portfolio/g5.png" alt="img04">
+                  <figcaption class="fig-caption">
+                    <i class="fa fa-search"></i>
+                    <h5 class="title">Creative Design</h5>
+                    <span class="sub-title">Photograpy</span>
+                    <a href="assets/images/portfolio/g5.png" data-fancybox data-src="#mh"></a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface">
+                <figure>
+                  <img src="assets/images/portfolio/g4.png" alt="img04">
+                  <figcaption class="fig-caption">
+                    <i class="fa fa-search"></i>
+                    <h5 class="title">Creative Design</h5>
+                    <span class="sub-title">Photograpy</span>
+                    <a href="assets/images/portfolio/g4.png" data-fancybox data-src="#mh"></a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding">
+                <figure>
+                  <img src="assets/images/portfolio/g6.png" alt="img04">
+                  <figcaption class="fig-caption">
+                    <i class="fa fa-search"></i>
+                    <h5 class="title">Creative Design</h5>
+                    <span class="sub-title">Photograpy</span>
+                    <a href="assets/images/portfolio/g6.png" data-fancybox data-src="#mh"></a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding">
+                <figure>
+                  <img src="assets/images/portfolio/g8.png" alt="img04">
+                  <figcaption class="fig-caption">
+                    <i class="fa fa-search"></i>
+                    <h5 class="title">Creative Design</h5>
+                    <span class="sub-title">Photograpy</span>
+                    <a href="assets/images/portfolio/g8.png" data-fancybox data-src="#mh"></a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="grid-item col-md-4 col-sm-6 col-xs-12 ui">
+                <figure>
+                  <img src="assets/images/portfolio/g9.png" alt="img04">
+                  <figcaption class="fig-caption">
+                    <i class="fa fa-search"></i>
+                    <h5 class="title">Creative Design</h5>
+                    <span class="sub-title">Photograpy</span>
+                    <a href="assets/images/portfolio/g9.png" data-fancybox data-src="#mh"></a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding">
+                <figure>
+                  <img src="assets/images/portfolio/g7.jpg" alt="img04">
+                  <figcaption class="fig-caption">
+                    <i class="fa fa-search"></i>
+                    <h5 class="title">Creative Design</h5>
+                    <span class="sub-title">Photograpy</span>
+                    <a href="assets/images/portfolio/g7.jpg" data-fancybox="gallery"></a>
+                  </figcaption>
+                </figure>
+              </div>
+            </div> <!-- End: .grid .project-gallery -->
+          </div> <!-- End: .grid .project-gallery -->
+        </div> <!-- End: .part -->
+      </div> <!-- End: .row -->
+    </div>
+    <div class="mh-portfolio-modal" id="mh">
+      <div class="container">
+        <div class="row mh-portfolio-modal-inner">
+          <div class="col-sm-5">
+            <h2>Wrap - A campanion plugin</h2>
+            <p>Wrap is a clean and elegant Multipurpose Landing Page Template.
+              It will fit perfectly for Startup, Web App or any type of Web Services.
+              It has 4 background styles with 6 homepage styles. 6 pre-defined color scheme.
+              All variations are organized separately so you can use / customize the template very easily.</p>
 
-              <!-- Portfolio Content -->
-              <div class="portfolio-content">
-                            
-                <!-- Portfolio filter -->
-                <ul id="portfolio_filters" class="portfolio-filters">
-                  <li class="active">
-                    <a class="filter btn btn-sm btn-link active" data-group="all">All</a>
-                  </li>
-                  <li>
-                    <a class="filter btn btn-sm btn-link" data-group="media">Mobile</a>
-                  </li>
-                  <li>
-                    <a class="filter btn btn-sm btn-link" data-group="illustration">Web</a>
-                  </li>
-                  <li>
-                    <a class="filter btn btn-sm btn-link" data-group="video">Video</a>
-                  </li>
+            <p>It is a clean and elegant Multipurpose Landing Page Template.
+              It will fit perfectly for Startup, Web App or any type of Web Services.
+              It has 4 background styles with 6 homepage styles. 6 pre-defined color scheme.
+              All variations are organized separately so you can use / customize the template very easily.</p>
+            <div class="mh-about-tag">
+              <ul>
+                <li><span>php</span></li>
+                <li><span>html</span></li>
+                <li><span>css</span></li>
+                <li><span>php</span></li>
+                <li><span>wordpress</span></li>
+                <li><span>React</span></li>
+                <li><span>Javascript</span></li>
+              </ul>
+            </div>
+            <a href="" class="btn btn-fill">Live Demo</a>
+          </div>
+          <div class="col-sm-7">
+            <div class="mh-portfolio-modal-img">
+              <img src="assets/images/pr-0.jif" alt="" class="img-fluid">
+              <p>All variations are organized separately so you can use / customize the template very easily.</p>
+              <img src="assets/images/pr-1.jif" alt="" class="img-fluid">
+              <p>All variations are organized separately so you can use / customize the template very easily.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--
+  ===================
+     PRICING
+  ===================
+  -->
+  <section class="mh-pricing" id="mh-pricing">
+    <div class="">
+      <div class="container">
+        <div class="row section-separator">
+          <div class="col-sm-12 section-title" data-wow-duration="0.8s" data-wow-delay="0.2s">
+            <h3>Pricing Table</h3>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <div class="mh-pricing dark-bg shadow-2 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+              <i class="fa fa-calendar"></i>
+              <h4>Full-time work</h4>
+              <p>I am available for full time</p>
+              <h5>$1500</h5>
+              <ul>
+                <li>Web Development</li>
+                <li>Advetising</li>
+                <li>Game Development</li>
+                <li>Music Writing</li>
+              </ul>
+              <a href="" class="btn btn-fill">Hire Me</a>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <div class="mh-pricing dark-bg shadow-2 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
+              <i class="fa fa-file"></i>
+              <h4>Fixed Price Project</h4>
+              <p>I am available for fixed roles</p>
+              <h5>$500</h5>
+              <ul>
+                <li>Web Development</li>
+                <li>Advetising</li>
+                <li>Game Development</li>
+                <li>Music Writing</li>
+              </ul>
+              <a href="" class="btn btn-fill">Hire Me</a>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <div class="mh-pricing dark-bg shadow-2 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
+              <i class="fa fa-hourglass"></i>
+              <h4>Hourley work</h4>
+              <p>I am available for Hourley projets</p>
+              <h5>$50</h5>
+              <ul>
+                <li>Web Development</li>
+                <li>Advetising</li>
+                <li>Game Development</li>
+                <li>Music Writing</li>
+              </ul>
+              <a href="" class="btn btn-fill">Hire Me</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--
+  ===================
+     BLOG
+  ===================
+  -->
+  <section class="mh-blog" id="mh-blog">
+    <div class="container">
+      <div class="row section-separator">
+        <div class="col-sm-12 section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+          <h3>Featured Posts</h3>
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <div class="mh-blog-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+            <img src="assets/images/b-3.png" alt="" class="img-fluid">
+            <div class="blog-inner">
+              <h2><a href="blog-single.html">A life without the daily traffic jams</a></h2>
+              <div class="mh-blog-post-info">
+                <ul>
+                  <li><strong>Post On</strong><a href="">24.11.19</a></li>
+                  <li><strong>By</strong><a href="">ThemeSpiders</a></li>
                 </ul>
-                <!-- End of Portfolio filter -->
-
-                <!-- Portfolio Grid -->
-                <div id="portfolio_grid" class="portfolio-grid portfolio-masonry masonry-grid-3">
-
-                  <!-- Portfolio Item 1 -->
-                  <figure class="item" data-groups='["all", "mobile"]'>
-                    <a class="ajax-page-load" href="portfolio-1.html">
-                      <img src="assets/images/portfolio/project-1.0.jpg" alt="">
-                      <div>
-                        <h5 class="name">audioguide dresden neustadt</h5>
-                        <small>Mobile</small>
-                        <i class="fa fa-file-text-o"></i>
-                      </div>
-                    </a>
-                  </figure>
-                  <!-- /Portfolio Item 1 -->
-
-                </div>
-                <!-- /Portfolio Grid -->
-
               </div>
-              <!-- /Portfolio Content -->
-
-            </section>
-            <!-- /Portfolio Subpage -->
-
-            <!-- Blog Subpage -->
-            <section class="pt-page pt-page-4" data-id="blog">
-              <div class="section-title-block">
-                <h2 class="section-title">Blog</h2>
-                <h5 class="section-description">My Diary</h5>
-              </div>
-              <div class="blog-masonry">
-                <!-- Blog Post 1 -->
-                <div class="item">
-                  <div class="blog-card">
-                    <div class="media-block">
-                      <a href="">
-                        <img class="post-image img-responsive" src="assets/images/blog/blog_post_1.jpg" alt="" />
-                        <div class="mask"></div>
-                        <div class="post-date"><span class="day">6</span><span class="month">Dec</span><!--<span class="year">2016</span>--></div>
-                      </a>
-                    </div>
-                    <div class="post-info">
-                      <ul class="category">
-                        <li><a href="#">Technology</a></li>
-                      </ul>
-                      <a href=""><h4 class="blog-item-title">Bootstrap is the Most Popular Framework</h4></a>
-                    </div>
-                  </div>
-                </div>
-                <!-- End of Blog Post 1 -->
-              </div>
-            </section>
-            <!-- End Blog Subpage -->
-
-            <!-- Contact Subpage -->
-            <section class="pt-page pt-page-5" data-id="contact">
-              <div class="section-title-block">
-                <h2 class="section-title">Contact</h2>
-                <h5 class="section-description">Get in Touch</h5>
-              </div>
-
-              <div class="row">
-                <div class="col-sm-6 col-md-6 subpage-block">
-                  <div class="block-title">
-                    <h3>Get in Touch</h3>
-                  </div>
-                  <p>We would be pleased to discuss with you.</p>
-                  <div class="contact-info-block">
-                    <div class="ci-icon">
-                      <i class="pe-7s-icon pe-7s-map-marker"></i>
-                    </div>
-                    <div class="ci-text">
-                      <h5>Sfax, TUNISIA</h5>
-                    </div>
-                  </div>
-                  <div class="contact-info-block">
-                    <div class="ci-icon">
-                      <i class="pe-7s-icon pe-7s-mail"></i>
-                    </div>
-                    <div class="ci-text">
-                      <h5>me@adnenhamdouni.tn</h5>
-                    </div>
-                  </div>
-                  <div class="contact-info-block">
-                    <div class="ci-icon">
-                      <i class="pe-7s-icon pe-7s-call"></i>
-                    </div>
-                    <div class="ci-text">
-                      <h5>+216 22 425 893</h5>
-                    </div>
-                  </div>
-                  <div class="contact-info-block">
-                    <div class="ci-icon">
-                      <i class="pe-7s-icon pe-7s-check"></i>
-                    </div>
-                    <div class="ci-text">
-                      <h5>Freelance Available</h5>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-sm-6 col-md-6 subpage-block">
-                  <div class="block-title">
-                    <h3>Contact Form</h3>
-                  </div>
-                  <form id="contact-form" method="post" action="">
-
-                    <div class="messages"></div>
-
-                    <div class="controls">
-                      <div class="form-group">
-                          <input id="form_name" type="text" name="name" class="form-control" placeholder="Full Name" required="required" data-error="Name is required.">
-                          <div class="form-control-border"></div>
-                          <i class="form-control-icon fa fa-user"></i>
-                          <div class="help-block with-errors"></div>
-                      </div>
-
-                      <div class="form-group">
-                          <input id="form_email" type="email" name="email" class="form-control" placeholder="Email Address" required="required" data-error="Valid email is required.">
-                          <div class="form-control-border"></div>
-                          <i class="form-control-icon fa fa-envelope"></i>
-                          <div class="help-block with-errors"></div>
-                      </div>
-
-                      <div class="form-group">
-                          <textarea id="form_message" name="message" class="form-control" placeholder="Message for me" rows="4" required="required" data-error="Please, leave me a message."></textarea>
-                          <div class="form-control-border"></div>
-                          <i class="form-control-icon fa fa-comment"></i>
-                          <div class="help-block with-errors"></div>
-                      </div>
-                      
-                      <div class="g-recaptcha" data-sitekey="6LdqmCAUAAAAAMMNEZvn6g4W5e0or2sZmAVpxVqI" data-callback="correctCaptcha"></div>
-
-                      <input type="submit" class="button btn-send" value="Send message">
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </section>
-            <!-- End Contact Subpage -->
-
+              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
+              <a href="blog-single.html">Read More</a>
+            </div>
           </div>
         </div>
-        <!-- /Page changer wrapper -->
+        <div class="col-sm-12 col-md-4">
+          <div class="mh-blog-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
+            <img src="assets/images/b-2.png" alt="" class="img-fluid">
+            <div class="blog-inner">
+              <h2><a href="blog-single.html">Proportion are what’s really needed</a></h2>
+              <div class="mh-blog-post-info">
+                <ul>
+                  <li><strong>Post On</strong><a href="">24.11.19</a></li>
+                  <li><strong>By</strong><a href="">ThemeSpiders</a></li>
+                </ul>
+              </div>
+              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
+              <a href="blog-single.html">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <div class="mh-blog-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
+            <img src="assets/images/b-1.png" alt="" class="img-fluid">
+            <div class="blog-inner">
+              <h2><a href="blog-single.html">Mounts of paper work to remember the way</a></h2>
+              <div class="mh-blog-post-info">
+                <ul>
+                  <li><strong>Post On</strong><a href="">24.11.19</a></li>
+                  <li><strong>By</strong><a href="">ThemeSpiders</a></li>
+                </ul>
+              </div>
+              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
+              <a href="blog-single.html">Read More</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <!-- /Main Content -->
     </div>
+  </section>
 
-    <app-root></app-root>
+  <!--
+  ===================
+     TESTIMONIALS
+  ===================
+  -->
+  <section class="mh-testimonial" id="mh-testimonial">
+    <div class="home-v-img">
+      <div class="container">
+        <div class="row section-separator">
+          <div class="col-sm-12 section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+            <h3>Client Reviews</h3>
+          </div>
+          <div class="col-sm-12 wow fadeInUp" id="mh-client-review" data-wow-duration="0.8s" data-wow-delay="0.3s">
+            <div class="each-client-item">
+              <div class="mh-client-item dark-bg black-shadow-1">
+                <img src="assets/images/c-1.png" alt="" class="img-fluid">
+                <p>Absolute wonderful ! I am completely
+                  blown away.The very best.I was amazed
+                  at the quality</p>
+                <h4>John Mike</h4>
+                <span>CEO, Author.Inc</span>
+              </div>
+            </div>
+            <div class="each-client-item">
+              <div class="mh-client-item dark-bg black-shadow-1">
+                <img src="assets/images/c-1.png" alt="" class="img-fluid">
+                <p>Absolute wonderful ! I am completely
+                  blown away.The very best.I was amazed
+                  at the quality</p>
+                <h4>John Mike</h4>
+                <span>CEO, Author.Inc</span>
+              </div>
+            </div>
 
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/page-transition.js"></script>
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/validator.js"></script>
-    <script src="assets/js/jquery.shuffle.min.js"></script>
-    <script src="assets/js/masonry.pkgd.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/jquery.hoverdir.js"></script>
-    <script src="assets/js/main.js"></script>
+            <div class="each-client-item">
+              <div class="mh-client-item dark-bg black-shadow-1">
+                <img src="assets/images/c-1.png" alt="" class="img-fluid">
+                <p>Absolute wonderful ! I am completely
+                  blown away.The very best.I was amazed
+                  at the quality</p>
+                <h4>John Mike</h4>
+                <span>CEO, Author.Inc</span>
+              </div>
+            </div>
+            <div class="each-client-item">
+              <div class="mh-client-item dark-bg black-shadow-1">
+                <img src="assets/images/c-1.png" alt="" class="img-fluid">
+                <p>Absolute wonderful ! I am completely
+                  blown away.The very best.I was amazed
+                  at the quality</p>
+                <h4>John Mike</h4>
+                <span>CEO, Author.Inc</span>
+              </div>
+            </div>
+            <div class="each-client-item">
+              <div class="mh-client-item dark-bg black-shadow-1">
+                <img src="assets/images/c-1.png" alt="" class="img-fluid">
+                <p>Absolute wonderful ! I am completely
+                  blown away.The very best.I was amazed
+                  at the quality</p>
+                <h4>John Mike</h4>
+                <span>CEO, Author.Inc</span>
+              </div>
+            </div>
 
-  </body>
+            <div class="each-client-item">
+              <div class="mh-client-item dark-bg black-shadow-1">
+                <img src="assets/images/c-1.png" alt="" class="img-fluid">
+                <p>Absolute wonderful ! I am completely
+                  blown away.The very best.I was amazed
+                  at the quality</p>
+                <h4>John Mike</h4>
+                <span>CEO, Author.Inc</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!--
+  ==============
+  * JS Files *
+  ==============
+  -->
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+  <!-- jQuery -->
+  <script src="assets/plugins/js/jquery.min.js"></script>
+  <!-- popper -->
+  <script src="assets/plugins/js/popper.min.js"></script>
+  <!-- bootstrap -->
+  <script src="assets/plugins/js/bootstrap.min.js"></script>
+  <!-- owl carousel -->
+  <script src="assets/plugins/js/owl.carousel.js"></script>
+  <!-- validator -->
+  <script src="assets/plugins/js/validator.min.js"></script>
+  <!-- wow -->
+  <script src="assets/plugins/js/wow.min.js"></script>
+  <!-- mixin js-->
+  <script src="assets/plugins/js/jquery.mixitup.min.js"></script>
+  <!-- circle progress-->
+  <script src="assets/plugins/js/circle-progress.js"></script>
+  <!-- jquery nav -->
+  <script src="assets/plugins/js/jquery.nav.js"></script>
+  <!-- Fancybox js-->
+  <script src="assets/plugins/js/jquery.fancybox.min.js"></script>
+  <!-- isotope js-->
+  <script src="assets/plugins/js/isotope.pkgd.js"></script>
+  <script src="assets/plugins/js/packery-mode.pkgd.js"></script>
+  <!-- Map api -->
+  <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyCRP2E3BhaVKYs7BvNytBNumU0MBmjhhxc"></script>
+  <!-- Custom Scripts-->
+  <script src="assets/js/map-init.js"></script>
+  <script src="assets/js/custom-scripts.js"></script>
+
+  <app-root></app-root>
+</body>
+
 
 </html>
-

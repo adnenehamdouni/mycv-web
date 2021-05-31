@@ -14,6 +14,7 @@ import { LayoutComponent } from "./shared/layout/layout.component";
 import { SkillsModule } from "./modules/skills/skills.module";
 import { ContextComponent } from "./components/context/context.component";
 import { LocationStrategy, HashLocationStrategy } from "@angular/common";
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LocationStrategy, HashLocationStrategy } from "@angular/common";
     FooterComponent,
     HeaderComponent,
     LayoutComponent,
-    ContextComponent
+    ContextComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
