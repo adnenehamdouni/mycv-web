@@ -59,4 +59,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  getContact($event: string) {
+    console.log('getContact: event value = ', $event);
+  }
 }

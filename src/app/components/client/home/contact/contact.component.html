@@ -49,7 +49,7 @@
         <div id="msgSubmit" class="h3 text-center hidden"></div>
         <div class="row">
           <div class="col-md-6 col-sm-12">
-            <input name="name" class="contact-name form-control" id="name" type="text" placeholder="First Name" required>
+            <input name="name" class="contact-name form-control" id="name" type="text" placeholder="First Name" required #name>
           </div>
           <div class="col-md-6 col-sm-12">
             <input name="name" class="contact-email form-control" id="L_name" type="text" placeholder="Last Name" required>
@@ -62,7 +62,7 @@
           </div>
           <!-- Subject Button -->
           <div class="btn-form col-sm-12">
-            <button type="submit" class="btn btn-fill btn-block" id="form-submit">Send Message</button>
+            <button type="submit"  (click)="addNewItem(name.value)" class="btn btn-fill btn-block" id="form-submit">Send Message</button>
           </div>
         </div>
       </form>

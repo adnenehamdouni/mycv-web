@@ -707,7 +707,7 @@
   -->
 
   <section class="map-image image-bg" id="mh-contact">
-    <app-contact [contactModel]="contact"></app-contact>
+    <app-contact [contactModel]="contact" (newContactEvent)="getContact($event)"></app-contact>
 
   </section>
 
