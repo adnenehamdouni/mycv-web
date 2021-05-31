@@ -14,6 +14,10 @@ import { LayoutComponent } from './shared/layout/layout.component';
 import { SkillsModule } from './modules/skills/skills.module';
 import { ContextComponent } from './components/context/context.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import {CarouselModule} from 'ngx-owl-carousel-o';
+import { CarouselHolderComponent } from './shared/carousel-holder/carousel-holder.component';
+import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
+import { ContactComponent } from './components/client/home/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -22,15 +26,19 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
     FooterComponent,
     HeaderComponent,
     LayoutComponent,
-    ContextComponent
+    ContextComponent,
+    CarouselHolderComponent,
+    ContactComponent
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    AppRoutingModule,
-    HttpClientModule,
-    SkillsModule // import Skills Module Here
-  ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        AppRoutingModule,
+        HttpClientModule,
+        SkillsModule,
+        CarouselModule, BrowserAnimationsModule, NoopAnimationsModule
+        // import Skills Module Here
+    ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })

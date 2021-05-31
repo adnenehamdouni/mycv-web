@@ -631,7 +631,8 @@
             <h3>Client Reviews</h3>
           </div>
           <div class="col-sm-12 wow fadeInUp" id="mh-client-review" data-wow-duration="0.8s" data-wow-delay="0.3s">
-            <div class="each-client-item">
+            <app-carousel-holder [dataList]="testimonialDataList"></app-carousel-holder>
+            <!--<div class="each-client-item">
               <div class="mh-client-item dark-bg black-shadow-1">
                 <img src="assets/images/c-1.png" alt="" class="img-fluid">
                 <p>Absolute wonderful ! I am completely
@@ -692,11 +693,22 @@
                 <h4>John Mike</h4>
                 <span>CEO, Author.Inc</span>
               </div>
-            </div>
+            </div>-->
           </div>
         </div>
       </div>
     </div>
+  </section>
+
+  <!--
+  ===================
+     CONTACT
+  ===================
+  -->
+
+  <section class="map-image image-bg" id="mh-contact">
+    <app-contact [contactModel]="contact"></app-contact>
+
   </section>
 
 </div>
