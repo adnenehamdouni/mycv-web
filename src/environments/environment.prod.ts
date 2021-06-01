@@ -1,9 +1,9 @@
 // environment.prod.ts
-import { environment as defaultEnvironment } from "./environment.defaults";
+import { environment as defaultEnvironment } from './environment.defaults';
 
 export const environment = {
   ...defaultEnvironment,
-  profile: "prod",
+  profile: 'prod',
   //overwrite the production environment configuration
   production: true,
   log: false,

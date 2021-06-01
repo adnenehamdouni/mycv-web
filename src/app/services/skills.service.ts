@@ -12,7 +12,7 @@ import { SkillsResponse } from '../core/responses/skills-response.model';
   providedIn: 'root'
 })
 export class SkillsService {
-  private skillsUrl = 'http://localhost:8081/whataboutme-app/api/skills'; // URL to web api
+  private skillsUrl = 'http://localhost:8081/mycv-app/api/skills'; // URL to web api
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -40,7 +40,7 @@ export class SkillsService {
   /** PUT: update the Skills on the server */
   updateSkills(skills: Skills): Observable<any> {
     return this.http.put(this.skillsUrl, skills, this.httpOptions).pipe(
-      tap(_ => this.logMessage(`from tap -> updated Skills id=${skills.id}`)),
+      tap((_) => this.logMessage(`from tap -> updated Skills id=${skills.id}`)),
       catchError(this.handleError<any>('updateSkills'))
     );
   }
@@ -51,7 +51,7 @@ export class SkillsService {
     const url = `${this.skillsUrl}/${id}`;
 
     return this.http.delete<Skills>(url, this.httpOptions).pipe(
-      tap(_ => this.logMessage(`from tap -> deleted Skills id=${id}`)),
+      tap((_) => this.logMessage(`from tap -> deleted Skills id=${id}`)),
       catchError(this.handleError<Skills>('deleteSkills'))
     );
   }
@@ -60,7 +60,7 @@ export class SkillsService {
   getSkills(id: number): Observable<Skills> {
     const url = `${this.skillsUrl}/${id}`;
     return this.http.get<Skills>(url).pipe(
-      tap(_ => this.logMessage(`from tap -> fetched Skills id=${id}`)),
+      tap((_) => this.logMessage(`from tap -> fetched Skills id=${id}`)),
       catchError(this.handleError<Skills>(`getSkills id=${id}`))
     );
   }
@@ -68,7 +68,7 @@ export class SkillsService {
   /** GET heroes from the server */
   getSkillss(): Observable<SkillsResponse> {
     return this.http.get<SkillsResponse>(this.skillsUrl).pipe(
-      tap(_ => this.logMessage('from tap -> fetched Skillss')),
+      tap((_) => this.logMessage('from tap -> fetched Skillss')),
       catchError(this.handleError<SkillsResponse>('getSkillss'))
     );
   }
@@ -80,7 +80,9 @@ export class SkillsService {
       return of([]);
     }
     return this.http.get<Skills[]>(`${this.skillsUrl}/?name=${term}`).pipe(
-      tap(_ => this.logMessage(`from tap -> found Skillss matching "${term}"`)),
+      tap((_) =>
+        this.logMessage(`from tap -> found Skillss matching "${term}"`)
+      ),
       catchError(this.handleError<Skills[]>('searchSkillss', []))
     );
   }

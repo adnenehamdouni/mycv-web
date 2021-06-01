@@ -37,3 +37,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 `npm run start:dev`
 `npm run start:qa --aot` // will run qa configuration using AOT mode
+
+"lint": {
+"builder": "@angular-eslint/builder:lint",
+"options": {
+"lintFilePatterns": [
+"src/**/*.ts",
+"src/**/*.html"
+]
+}
+},

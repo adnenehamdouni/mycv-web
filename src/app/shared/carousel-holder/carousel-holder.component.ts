@@ -1,6 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {OwlOptions} from 'ngx-owl-carousel-o';
-import {CarouselModel} from '../../model/carousel.model';
+import { Component, Input, OnInit } from '@angular/core';
+import { OwlOptions } from 'ngx-owl-carousel-o';
+import { CarouselModel } from '../../model/carousel.model';
 
 @Component({
   selector: 'app-carousel-holder',
@@ -8,7 +8,6 @@ import {CarouselModel} from '../../model/carousel.model';
   styleUrls: ['./carousel-holder.component.scss']
 })
 export class CarouselHolderComponent implements OnInit {
-
   @Input() dataList: CarouselModel; // decorate the property with @Input()
   customOptions: OwlOptions = {
     loop: true,
@@ -35,11 +34,9 @@ export class CarouselHolderComponent implements OnInit {
     nav: true
   };
 
-  constructor() {
-  }
+  constructor() {}
 
   ngOnInit(): void {
     console.log('dataList = ', this.dataList);
   }
-
 }

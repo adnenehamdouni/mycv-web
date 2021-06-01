@@ -46,7 +46,7 @@ export class SkillsComponent implements OnInit {
    */
 
   getSkills() {
-    this.skillsServie.getSkillss().subscribe(response => {
+    this.skillsServie.getSkillss().subscribe((response) => {
       this.response = response;
       console.log(
         'SkillsComponent: retreive skillsResponse : ' + JSON.stringify(response)

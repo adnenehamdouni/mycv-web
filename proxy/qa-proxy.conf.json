@@ -1,8 +1,8 @@
 {
-  "/whataboutme-app/*": {
+  "/mycv-app/*": {
     "target": "http://localhost:8093",
     "secure": false,
     "logLevel": "debug",
-    "pathRewrite": { "^/whataboutme-app": "/whataboutme-app" }
+    "pathRewrite": { "^/mycv-app": "/mycv-app" }
   }
 }

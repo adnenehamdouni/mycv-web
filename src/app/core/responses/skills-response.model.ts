@@ -1,4 +1,4 @@
-import { Skills } from "src/app/model/skills.model";
+import { Skills } from 'src/app/model/skills.model';
 
 export class SkillsResponse {
   status: string;

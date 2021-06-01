@@ -1,11 +1,11 @@
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { SkillsComponent } from "src/app/components/client/skills/skills.component";
-import { SESSION_STORAGE } from "ngx-webstorage-service";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { SkillsComponent } from 'src/app/components/client/skills/skills.component';
+import { SESSION_STORAGE } from 'ngx-webstorage-service';
 import {
   MY_AWESOME_SERVICE_STORAGE,
   SessionStorageService
-} from "src/app/shared/services/storage/session-storage.service";
+} from 'src/app/shared/services/storage/session-storage.service';
 
 @NgModule({
   providers: [
