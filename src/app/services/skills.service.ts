@@ -12,7 +12,7 @@ import { SkillsResponse } from '../core/responses/skills-response.model';
   providedIn: 'root'
 })
 export class SkillsService {
-  private skillsUrl = 'http://localhost:8081/mycv-app/api/skills'; // URL to web api
+  private skillsUrl = 'http://localhost:8087/mycv-app/api/skills'; // URL to web api
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
