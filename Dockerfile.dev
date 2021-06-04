@@ -13,9 +13,12 @@ COPY ./ /usr/local/app/
 
 # Install all the dependencies
 RUN npm install
+RUN npm i -g @angular/cli
+RUN npm audit fix --force
 
 # Generate the build of the application
 RUN ng build
+
 
 
 # Stage 2: Serve app with nginx server
