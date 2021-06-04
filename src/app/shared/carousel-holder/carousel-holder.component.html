@@ -1,0 +1,73 @@
+<div>
+
+  <div>Some tags before</div>
+  <owl-carousel-o [options]="customOptions">
+
+    <ng-container *ngFor="let slide of dataList">
+      <ng-template carouselSlide>
+        <!--<img [src]="slide.src" [alt]="slide.alt" [title]="slide.title">-->
+        <div class="each-client-item">
+          <div class="mh-client-item dark-bg black-shadow-1">
+            <img src="{{slide.imagePath}}" alt="" class="img-fluid">
+            <p>{{slide.comment}}</p>
+            <h4>{{slide.author}}</h4>
+            <span>{{slide.function}}</span>
+          </div>
+        </div>
+      </ng-template>
+    </ng-container>
+
+  </owl-carousel-o>
+  <div>Some tags after</div>
+
+</div><!--<owl-carousel-o [options]="customOptions">
+  <ng-template carouselSlide>
+    <div class="each-client-item">
+      <div class="mh-client-item dark-bg black-shadow-1">
+        <img src="assets/images/c-1.png" alt="" class="img-fluid">
+        <p>Absolute wonderful ! I am completely
+          blown away.The very best.I was amazed
+          at the quality</p>
+        <h4>John Mike</h4>
+        <span>CEO, Author.Inc</span>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template carouselSlide>
+    <div class="each-client-item">
+      <div class="mh-client-item dark-bg black-shadow-1">
+        <img src="assets/images/c-1.png" alt="" class="img-fluid">
+        <p>Absolute wonderful ! I am completely
+          blown away.The very best.I was amazed
+          at the quality</p>
+        <h4>John Mike</h4>
+        <span>CEO, Author.Inc</span>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template carouselSlide>
+    <div class="each-client-item">
+      <div class="mh-client-item dark-bg black-shadow-1">
+        <img src="assets/images/c-1.png" alt="" class="img-fluid">
+        <p>Absolute wonderful ! I am completely
+          blown away.The very best.I was amazed
+          at the quality</p>
+        <h4>John Mike</h4>
+        <span>CEO, Author.Inc</span>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template carouselSlide>
+    <div class="each-client-item">
+      <div class="mh-client-item dark-bg black-shadow-1">
+        <img src="assets/images/c-1.png" alt="" class="img-fluid">
+        <p>Absolute wonderful ! I am completely
+          blown away.The very best.I was amazed
+          at the quality</p>
+        <h4>John Mike</h4>
+        <span>CEO, Author.Inc</span>
+      </div>
+    </div>
+  </ng-template>
+</owl-carousel-o>-->
+<div>Some tags after</div>

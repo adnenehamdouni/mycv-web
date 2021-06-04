@@ -1,0 +1,142 @@
+#!/usr/bin/env groovy
+
+// Use node dedicated to Java compilation
+pipeline {
+    agent any
+
+    tools {
+        //jdk 'jdk8'
+        maven 'node'
+    }
+    stages {
+        // Clean workspace
+
+        stage('test node installation') {
+            steps {
+                echo 'Checking node Version..'
+                sh 'node --version'
+                sh 'which node'
+            }
+        }
+        stage('test npm installation') {
+            steps {
+              echo 'Checking npm Version..'
+              sh 'npm --version'
+              sh 'which npm'
+            }
+        }
+        stage('Clean workspace') {
+            steps {
+                println("deleteDir")
+                deleteDir()
+            }
+
+        }
+        // Download source code
+        stage('Preparation') {
+            steps {
+                println("checkout scm")
+                checkout scm
+            }
+        }
+
+        stage('Clean and check profiles') {
+
+            steps {
+                retry(3) {
+                    echo 'Cleaning..'
+                }
+            }
+        }
+
+        // Launch Maven Build
+        stage('Build') {
+
+            steps {
+                echo 'Testing..'
+                // Tell Mailer that it's a success
+              sh 'ng build'
+            }
+        }
+
+        stage('Test') {
+
+            steps {
+                echo 'Testing..'
+                sh 'ng lint'
+
+            }
+        }
+
+        // Launch Maven Package
+        stage('Package') {
+
+            steps {
+                timeout(time: 1, unit: 'MINUTES') {
+                    echo 'Packaging..'
+                }
+            }
+        }
+
+        stage('Deploy Nexus') {
+            steps {
+                echo 'Deploying App Here..'
+                //sh 'mvn clean deploy -Dspring.profiles.active=prod'
+            }
+        }
+
+        stage('Docker Compose Build') {
+            agent any
+            steps {
+                echo 'Docker build App Here..'
+                //sh "chmod +x -R ${env.WORKSPACE}"
+                //docker.build('mobycounter')
+                //sh './deploy.sh'
+                //sh 'docker build -f Dockerfile -t springboot-docker-sample .'
+                //sh "docker kill spring-boot-docker-sample > /dev/null 2>&1"
+                //sh "docker rm spring-boot-docker-sample > /dev/null 2>&1"
+                sh "docker-compose --version"
+                sh "docker-compose build"
+            }
+        }
+
+      stage('Docker Compose Run') {
+        agent any
+        steps {
+          echo 'Docker up container and run App Here..'
+          sh "docker-compose --version"
+          sh "docker-compose up -d"
+        }
+      }
+
+    }
+
+    post {
+        always {
+            echo 'This will always run'
+        }
+        success {
+            echo 'This will run only if successful'
+        }
+        failure {
+            echo 'This will run only if failed'
+        }
+        unstable {
+            echo 'This will run only if the run was marked as unstable'
+        }
+        changed {
+            echo 'This will run only if the state of the Pipeline has changed'
+            echo 'For example, if the Pipeline was previously failing but is now successful'
+        }
+    }
+
+}
+
+def mavenTask(String command) {
+    def rootDir = pwd()
+    def common = load "${rootDir}/jenkinsfile-common"
+    println("Running Build")
+    common.mavenTask(command)
+}
+
+

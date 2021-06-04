@@ -1,6 +1,4 @@
-import { Deserializable } from "../core/utils/deserializable.model";
-
-export class Skills implements Deserializable {
+export class Skills {
   id: number;
   name: string;
   isDeleted: boolean;

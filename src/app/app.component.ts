@@ -1,15 +1,15 @@
-import { Component, OnDestroy, OnInit } from "@angular/core";
-import { ContextService } from "./services/context/context.service";
-import { AppDetails } from "./model/init/app-details.model";
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ContextService } from './services/context/context.service';
+import { AppDetails } from './model/init/app-details.model';
 //import { environment } from "@environment"; // nice!
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.scss"]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, OnDestroy {
-  title = "whataboutme";
+  title = 'mycv';
 
   //environment = environment;
 
@@ -22,14 +22,14 @@ export class AppComponent implements OnInit, OnDestroy {
       "AppComponent: environment : " + JSON.stringify(this.environment)
     );*/
 
-    this.context.init().subscribe(response => {
+    this.context.init().subscribe((response) => {
       this.appDetails = response;
       console.log(
-        "AppComponent: retreive response : " + JSON.stringify(response)
+        'AppComponent: retreive response : ' + JSON.stringify(response)
       );
       if (this.appDetails != null) {
         console.log(
-          "AppComponent: retreive appDetails : " +
+          'AppComponent: retreive appDetails : ' +
             JSON.stringify(this.appDetails)
         );
         // Save session data - appDetails

@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  client:
+    container_name: mycv-web
+    stdin_open: true
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "83:80"
+    volumes:
+      - "/app/node_modules"
+      - "./:/app"
+    environment:
+      - VIRTUAL_HOST=adnenhamdouni.com
+      - VIRTUAL_NETWORK=nginx-proxy
+      - VIRTUAL_PORT=8087
+      - LETSENCRYPT_HOST=adnenhamdouni.com
+      - LETSENCRYPT_EMAIL=admin@adnenhamdouni.com

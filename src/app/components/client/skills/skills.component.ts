@@ -1,17 +1,17 @@
-import { Component, OnInit } from "@angular/core";
-import { SkillsService } from "src/app/services/skills.service";
-import { Skills } from "src/app/model/skills.model";
-import { SkillsResponse } from "src/app/core/responses/skills-response.model";
-import { isStorageAvailable } from "ngx-webstorage-service";
-import { SessionStorageService } from "src/app/shared/services/storage/session-storage.service";
+import { Component, OnInit } from '@angular/core';
+import { SkillsService } from 'src/app/services/skills.service';
+import { Skills } from 'src/app/model/skills.model';
+import { SkillsResponse } from 'src/app/core/responses/skills-response.model';
+import { isStorageAvailable } from 'ngx-webstorage-service';
+import { SessionStorageService } from 'src/app/shared/services/storage/session-storage.service';
 
 @Component({
-  selector: "app-skills",
-  templateUrl: "./skills.component.html",
-  styleUrls: ["./skills.component.scss"]
+  selector: 'app-skills',
+  templateUrl: './skills.component.html',
+  styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit {
-  //private heroes = HEROES;
+  // private heroes = HEROES;
   skillss: Skills[];
   response: SkillsResponse;
 
@@ -20,10 +20,10 @@ export class SkillsComponent implements OnInit {
     private sessionStorageService: SessionStorageService
   ) {}
 
-  public hasSkillss: boolean = false;
+  public hasSkillss = false;
 
   ngOnInit() {
-    console.log("SkillsComponent: ngOnInit");
+    console.log('SkillsComponent: ngOnInit');
     const sessionStorageAvailable = isStorageAvailable(sessionStorage);
 
     this.trySaveSessionStrogage();
@@ -38,7 +38,7 @@ export class SkillsComponent implements OnInit {
   }
 
   tryLoadSessionStrogage() {
-    this.sessionStorageService.getFromLocal("pure-awesomeness");
+    this.sessionStorageService.getFromLocal('pure-awesomeness');
   }
 
   /**
@@ -46,10 +46,10 @@ export class SkillsComponent implements OnInit {
    */
 
   getSkills() {
-    this.skillsServie.getSkillss().subscribe(response => {
+    this.skillsServie.getSkillss().subscribe((response) => {
       this.response = response;
       console.log(
-        "SkillsComponent: retreive skillsResponse : " + JSON.stringify(response)
+        'SkillsComponent: retreive skillsResponse : ' + JSON.stringify(response)
       );
       if (this.response.skillsList != null) {
         this.skillss = this.response.skillsList;

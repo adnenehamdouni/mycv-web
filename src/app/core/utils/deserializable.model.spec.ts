@@ -1,7 +1,7 @@
-import { Deserializable } from "./deserializable.model";
+import { Deserializable } from './deserializable.model';
 
-describe("Deserializable", () => {
-  it("should create an instance", () => {
+describe('Deserializable', () => {
+  it('should create an instance', () => {
     expect(new Deserializable()).toBeTruthy();
   });
 });

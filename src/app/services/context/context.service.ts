@@ -1,20 +1,20 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 
-import { AppDetails } from "src/app/model/init/app-details.model";
+import { AppDetails } from 'src/app/model/init/app-details.model';
 
-import { Observable, of } from "rxjs"; // <-- Import Observable
+import { Observable, of } from 'rxjs'; // <-- Import Observable
 
-import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { catchError, map, tap } from "rxjs/operators";
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { catchError, map, tap } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class ContextService {
-  private initUrl = "http://localhost:8081/whataboutme-app/init"; // URL to web api
+  private initUrl = 'http://localhost:8081/mycv-app/init'; // URL to web api
 
   httpOptions = {
-    headers: new HttpHeaders({ "Content-Type": "application/json" })
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
   constructor(private http: HttpClient) {}
 
@@ -22,7 +22,7 @@ export class ContextService {
   init(): Observable<AppDetails> {
     const url = `${this.initUrl}`;
     return this.http.get<AppDetails>(url).pipe(
-      tap(_ => this.logMessage("from tap -> fetched AppDetails")),
+      tap((_) => this.logMessage('from tap -> fetched AppDetails')),
       catchError(this.handleError<AppDetails>(`AppDetails not initialized`))
     );
   }
@@ -34,7 +34,7 @@ export class ContextService {
 
   /** Log a SkillsService message with the MessageService */
   private logMessage(message: string) {
-    console.log("SkillsService: => message : " + message);
+    console.log('SkillsService: => message : ' + message);
   }
 
   /*************************
@@ -48,7 +48,7 @@ export class ContextService {
    * @param operation - name of the operation that failed
    * @param result - optional value to return as the observable result
    */
-  private handleError<T>(operation = "operation", result?: T) {
+  private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       // TODO: send the error to remote logging infrastructure
       console.error(error); // log to console instead
