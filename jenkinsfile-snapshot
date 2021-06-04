@@ -7,9 +7,18 @@ pipeline {
     tools {
         //jdk 'jdk8'
         nodejs 'node'
+        maven 'maven3'
     }
     stages {
         // Clean workspace
+
+        stage('test maven installation') {
+          steps {
+            echo 'Checking Maven Version..'
+            sh 'mvn -version'
+            sh 'which mvn'
+          }
+        }
 
         stage('test node installation') {
             steps {
