@@ -1,15 +1,15 @@
 # Stage 1: Compile and Build angular codebase
 
 # Use official node image as the base image
-FROM node:14.16.1 as build
+FROM node:latest as build
 
 # Set the working directory
 WORKDIR /usr/local/app
 
+RUN rm -rf node_modules package-lock.json
+
 # Add the source code to app
 COPY ./ /usr/local/app/
-
-RUN rm -rf node_modules package-lock.json
 
 # Install all the dependencies
 RUN npm install
