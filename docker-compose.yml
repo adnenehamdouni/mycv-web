@@ -15,6 +15,6 @@ services: # Here we define our service(s)
     environment:
       - VIRTUAL_HOST=adnenhamdouni.com
       - VIRTUAL_NETWORK=nginx-proxy
-      - VIRTUAL_PORT=83
+      - VIRTUAL_PORT=4001
       - LETSENCRYPT_HOST=adnenhamdouni.com
       - LETSENCRYPT_EMAIL=admin@adnenhamdouni.com
