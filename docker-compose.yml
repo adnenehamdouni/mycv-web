@@ -14,6 +14,6 @@ services:
     environment:
       - VIRTUAL_HOST=adnenhamdouni.com
       - VIRTUAL_NETWORK=nginx-proxy
-      - VIRTUAL_PORT=8087
+      - VIRTUAL_PORT=83
       - LETSENCRYPT_HOST=adnenhamdouni.com
       - LETSENCRYPT_EMAIL=admin@adnenhamdouni.com
