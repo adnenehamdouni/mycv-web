@@ -10,8 +10,6 @@ services: # Here we define our service(s)
     volumes:
       - "/app/node_modules"
       - "./:/app"
-    command: >
-      bash -c "npm install && ng serve --host 0.0.0.0 --port 4200"
     environment:
       - VIRTUAL_HOST=adnenhamdouni.com
       - VIRTUAL_NETWORK=nginx-proxy

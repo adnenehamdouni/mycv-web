@@ -8,6 +8,7 @@ RUN npm install -g @angular/cli
 
 COPY . /app
 
-CMD ["npm", "run", "build"]
+RUN ng build
+Run ng serve
 
 EXPOSE 4201
