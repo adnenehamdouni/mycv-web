@@ -103,6 +103,21 @@ pipeline {
             }
         }
 
+      stage('Docker Compose Build') {
+        agent any
+        steps {
+          echo 'Removing old container if exist..'
+          sh 'if [ ! "$(docker ps -q -f name=mycv-web)" ]; then\n' +
+            '    if [ "$(docker ps -aq -f status=exited -f name=mycv-app)" ]; then\n' +
+            '        # cleanup\n' +
+            '        docker rm mycv-web\n' +
+            '    fi\n' +
+            '    # run your container\n' +
+            '    #docker run -d --name <name> my-docker-image\n' +
+            'fi'
+        }
+      }
+
         stage('Docker Compose Build') {
             agent any
             steps {
@@ -111,8 +126,6 @@ pipeline {
                 //docker.build('mobycounter')
                 //sh './deploy.sh'
                 //sh 'docker build -f Dockerfile -t springboot-docker-sample .'
-                sh "docker kill mycv-web > /dev/null 2>&1"
-                sh "docker rm mycv-web > /dev/null 2>&1"
                 sh "docker-compose --version"
                 sh "docker-compose build"
             }
