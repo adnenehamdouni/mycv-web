@@ -111,8 +111,8 @@ pipeline {
                 //docker.build('mobycounter')
                 //sh './deploy.sh'
                 //sh 'docker build -f Dockerfile -t springboot-docker-sample .'
-                //sh "docker kill spring-boot-docker-sample > /dev/null 2>&1"
-                //sh "docker rm spring-boot-docker-sample > /dev/null 2>&1"
+                sh "docker kill mycv-web > /dev/null 2>&1"
+                sh "docker rm mycv-web > /dev/null 2>&1"
                 sh "docker-compose --version"
                 sh "docker-compose build"
             }
