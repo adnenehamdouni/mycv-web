@@ -10,6 +10,8 @@ WORKDIR $HOME
 
 COPY package.json $HOME
 
+RUN rm -rf node_modules package-lock.json
+
 # Install And Clean Cache #
 RUN npm install && npm cache clean --force && npm cache verify
 
