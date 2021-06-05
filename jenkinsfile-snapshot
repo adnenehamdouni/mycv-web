@@ -5,18 +5,11 @@ pipeline {
     agent {
       docker
         { image 'node:14-alpine'
-          image 'maven:3.8.1'
         }
     }
 
     stages {
         // Clean workspace
-
-        stage('test maven installation') {
-          steps {
-            sh 'mvn --version'
-          }
-        }
 
         stage('test node installation') {
             steps {
