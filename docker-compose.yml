@@ -1,20 +1,27 @@
 version: '3.5' # We use version 3.5 syntax
 services: # Here we define our service(s)
   angular-service: # The name of the service
-    container_name: angularcontainer  # Container name
+    container_name: mycv-web  # Container name
+    restart: always
     build:  # Location of our Dockerfile
       context: .
       dockerfile: Dockerfile
     ports:
-      - '4201:4200' # Port mapping
+      - '4200:4200' # Port mapping
     volumes:
       - "/app/node_modules"
       - "./:/app"
     command: >
-      bash -c "cd /app && npm install && ng serve --host 0.0.0.0 --port 4200"
+      bash -c "cd /app && npm install && ng serve --host 0.0.0.0 --port 4200 --public-host adnenhamdouni.com"
     environment:
       - VIRTUAL_HOST=adnenhamdouni.com
       - VIRTUAL_NETWORK=nginx-proxy
       - VIRTUAL_PORT=4001
       - LETSENCRYPT_HOST=adnenhamdouni.com
       - LETSENCRYPT_EMAIL=admin@adnenhamdouni.com
+    networks:
+      - docker_default 
+
+networks:
+  docker_default:
+    external: true   

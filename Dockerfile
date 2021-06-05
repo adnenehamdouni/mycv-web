@@ -12,4 +12,4 @@ RUN ng build
 #RUN ng start:prod
 #RUN ng serve
 
-EXPOSE 4201
+EXPOSE 4200
