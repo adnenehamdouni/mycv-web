@@ -20,8 +20,8 @@ services: # Here we define our service(s)
       - LETSENCRYPT_HOST=adnenhamdouni.com
       - LETSENCRYPT_EMAIL=admin@adnenhamdouni.com
     networks:
-      - docker_default
+      - docker_default 
 
 networks:
   docker_default:
-    external: true
+    external: true   
