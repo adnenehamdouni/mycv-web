@@ -6,7 +6,7 @@ COPY package.json /app
 RUN rm -rf node_modules package-lock.json
 RUN npm cache clean --force && npm cache verify
 RUN npm install
-RUN npm install -g @angular/cli
+#RUN npm install -g @angular/cli
 
 COPY . /app
 
