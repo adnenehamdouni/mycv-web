@@ -8,17 +8,15 @@ services: # Here we define our service(s)
       dockerfile: Dockerfile
     ports:
       - '4200:4200' # Port mapping
-      #- '84:80'
     volumes:
       - "/app/node_modules"
       - "./:/app"
     #old command work : #bash -c "cd /app && ng serve --host 0.0.0.0 --port 4200 --public-host adnenhamdouni.com"
     command: >
-      bash -c "cd /app && npm run start:prod"
+      bash -c "cd /app && npm install && npm run start:prod"
     environment:
       - VIRTUAL_HOST=adnenhamdouni.com
       - VIRTUAL_NETWORK=nginx-proxy
-      #- VIRTUAL_PORT=84
       - VIRTUAL_PORT=4200
       - LETSENCRYPT_HOST=adnenhamdouni.com
       - LETSENCRYPT_EMAIL=admin@adnenhamdouni.com
