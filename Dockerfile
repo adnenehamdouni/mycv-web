@@ -3,7 +3,11 @@ FROM node:14.16.1 as build
 
 #ENV HOME=/usr/src/app
 ENV HOME=/app
+
 RUN mkdir -p $HOME
+
+WORKDIR $HOME
+
 COPY package.json $HOME
 
 # Install And Clean Cache #
