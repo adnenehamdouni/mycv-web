@@ -16,10 +16,11 @@ RUN ng build
 #RUN ng serve
 
 # BASE IMAGE with an alias #
-FROM nginx as runtime
+#FROM nginx as runtime
 
 # Copy contents from the other container with alias "build" #
 # onto the specified path in the current container#
-COPY --from=build /app/dist/mycv /usr/share/nginx/html
+#COPY --from=build /app/dist/mycv /usr/share/nginx/html
 
-EXPOSE 84
+EXPOSE 4200
+#EXPOSE 84
