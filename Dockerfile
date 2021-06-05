@@ -4,12 +4,17 @@ FROM node:14.16.1 as build
 # Install Angular CLI to run Build #
 RUN npm install -g @angular/cli
 
-WORKDIR /app
-COPY package.json /app
+ENV HOME=/usr/src/app
+RUN mkdir -p $HOME
+WORKDIR $HOME
+
+#WORKDIR /app
+
+COPY package.json $HOME
 
 RUN npm install && npm cache clean --force && npm cache verify
 
-COPY . /app
+COPY . $HOME
 
 RUN ng build
 #RUN ng start:prod
