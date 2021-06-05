@@ -60,9 +60,9 @@ pipeline {
 
       stage('install') {
         steps {
-          sh 'rm -rf node_modules package-lock.json'
-          sh 'npm install'
-          sh 'npm i -g @angular/cli'
+          //sh 'rm -rf node_modules package-lock.json'
+          //sh 'npm install'
+          //sh 'npm i -g @angular/cli'
         }
       }
 
@@ -72,7 +72,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 // Tell Mailer that it's a success
-              sh 'ng build'
+              //sh 'ng build'
             }
         }
 
@@ -80,7 +80,7 @@ pipeline {
 
             steps {
                 echo 'Testing..'
-                sh 'ng lint'
+                //sh 'ng lint'
 
             }
         }
