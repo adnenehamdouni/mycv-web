@@ -1,10 +1,11 @@
-FROM node:14.16.1-alpine as build
+FROM node:14.16.1 as build
 
 WORKDIR /app
 COPY package.json /app
 
-#RUN rm -rf node_modules package-lock.json
-RUN npm install && npm cache clean --force && npm cache verify
+RUN rm -rf node_modules package-lock.json
+RUN npm cache clean --force && npm cache verify
+RUN npm install
 RUN npm install -g @angular/cli
 
 COPY . /app
