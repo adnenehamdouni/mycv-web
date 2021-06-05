@@ -6,7 +6,7 @@ pipeline {
 
     tools {
         //jdk 'jdk8'
-        nodejs 'node'
+        nodejs 'node14'
         maven 'maven3'
     }
     stages {
