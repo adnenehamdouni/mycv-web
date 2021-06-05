@@ -12,7 +12,7 @@ services: # Here we define our service(s)
       - "/app/node_modules"
       - "./:/app"
     command: >
-      bash -c "cd /app && && rm -rf node_modules package-lock.json && npm install && ng serve --host 0.0.0.0 --port 4200 --public-host adnenhamdouni.com"
+      bash -c "cd /app && rm -rf node_modules package-lock.json && npm install && ng serve --host 0.0.0.0 --port 4200 --public-host adnenhamdouni.com"
     environment:
       - VIRTUAL_HOST=adnenhamdouni.com
       - VIRTUAL_NETWORK=nginx-proxy
