@@ -19,7 +19,7 @@ services: # Here we define our service(s)
       - VIRTUAL_HOST=adnenhamdouni.com
       - VIRTUAL_NETWORK=nginx-proxy
       #- VIRTUAL_PORT=84
-      - VIRTUAL_PORT=4001
+      - VIRTUAL_PORT=4200
       - LETSENCRYPT_HOST=adnenhamdouni.com
       - LETSENCRYPT_EMAIL=admin@adnenhamdouni.com
     networks:
