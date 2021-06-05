@@ -4,7 +4,8 @@ FROM node:14.16.1 as build
 # Install Angular CLI to run Build #
 RUN npm install -g @angular/cli
 
-ENV HOME=/usr/src/app
+#ENV HOME=/usr/src/app
+ENV HOME=/app
 RUN mkdir -p $HOME
 WORKDIR $HOME
 
@@ -29,3 +30,5 @@ RUN ng build
 
 EXPOSE 4200
 #EXPOSE 84
+
+USER 1000

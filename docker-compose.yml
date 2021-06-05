@@ -10,11 +10,11 @@ services: # Here we define our service(s)
       - '4200:4200' # Port mapping
       #- '84:80'
     volumes:
-      - "/usr/src/app/node_modules"
-      - "./:/usr/src/app"
+      - "/app/node_modules"
+      - "./:/app"
     #old command work : #bash -c "cd /app && ng serve --host 0.0.0.0 --port 4200 --public-host adnenhamdouni.com"
     command: >
-      bash -c "cd /usr/src/app && npm run start:prod"
+      bash -c "cd /app && npm run start:prod"
     environment:
       - VIRTUAL_HOST=adnenhamdouni.com
       - VIRTUAL_NETWORK=nginx-proxy
