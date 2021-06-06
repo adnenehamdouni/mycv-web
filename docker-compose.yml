@@ -12,8 +12,8 @@ services: # Here we define our service(s)
     ports:
       - '83:80' # Port mapping
     volumes:
-      - "./volumes/config/mycv-web/conf.d/:/etc/nginx/conf.d"
-      - "./volumes/config/mycv-web/config.js:/usr/share/nginx/html/config.js"
+      - "./setup/volume/conf.d/:/etc/nginx/conf.d"
+      - "./setup/config/config.js:/usr/share/nginx/html/config.js"
     environment:
       - VIRTUAL_HOST=adnenhamdouni.com
       - VIRTUAL_NETWORK=nginx-proxy
