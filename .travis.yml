@@ -22,10 +22,18 @@ install:
 
 script:
   - npm run lint
-  - npm test
+  #- npm test
 
 before_deploy:
   - npm run build --prod
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/mycv-web
+  on:
+    branch: master
 
 jobs:
   include:
