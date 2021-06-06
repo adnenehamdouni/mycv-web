@@ -22,7 +22,7 @@ install:
 
 script:
   - npm run lint
-  - npm test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
+  - npm test
 
 before_deploy:
   - npm run build --prod
