@@ -1,5 +1,5 @@
 # BASE IMAGE with an alias #
-FROM node:14.16.1 as build
+FROM node:14.17.0 as build
 
 #ENV HOME=/usr/src/app
 ENV HOME=/app
