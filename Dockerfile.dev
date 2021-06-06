@@ -11,7 +11,14 @@ RUN npm install @angular/cli
 COPY . /app
 
 RUN npm run build
-#RUN ng start:prod
-#RUN ng serve
 
-EXPOSE 4200
+# Stage 2: Serve app with nginx server
+
+# Use official nginx image as the base image
+FROM nginx:latest
+
+# Copy the build output to replace the default nginx contents.
+COPY --from=build /app/dist/mycv /usr/share/nginx/html
+
+# Expose port 80
+EXPOSE 83
