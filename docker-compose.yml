@@ -11,8 +11,8 @@ services: # Here we define our service(s)
     container_name: mycv-web  # Container name
     ports:
       - '83:80' # Port mapping
-    #volumes:
-      #- "./setup/volume/conf.d/:/etc/nginx/conf.d"
+    volumes:
+      - "./setup/volume/conf.d/:/etc/nginx/conf.d"
       #- "./setup/config/config.js:/usr/share/nginx/html/config.js"
       #- "./setup/html/:/usr/share/nginx/html"
     environment:
