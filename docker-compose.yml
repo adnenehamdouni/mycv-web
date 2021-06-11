@@ -1,10 +1,10 @@
-version: '3.7'
-
-services:
-
-  example:
-    container_name: mycv-web
-    build:
+version: '3.8' # We use version 3.5 syntax
+services: # Here we define our service(s)
+  ### BEGIN SAMPLE WEBSITE & API ###
+  mycv-web:
+    restart: always
+    container_name: mycv-web # Container name
+    build: # Location of our Dockerfile
       context: .
       dockerfile: Dockerfile.dev
     volumes:
@@ -22,6 +22,7 @@ services:
       - LETSENCRYPT_EMAIL=admin@adnenhamdouni.com
     networks:
       - docker_default
+### OTHER SETTINGS ###
 networks:
   docker_default:
     external: false
