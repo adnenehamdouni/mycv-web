@@ -4,8 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --proxy-config=proxy.conf.json",
-    "start:dev": "ng serve -c=dev --port=4201 --proxy-config=proxy/dev-proxy.conf.json",
-    "start:qa": "ng serve -c=qa --port=4202 --proxy-config=proxy/qa-proxy.conf.json",
+    "start:dev": "ng serve -c=dev --port=4200 --host 0.0.0.0 --proxy-config=proxy/dev-proxy.conf.json",
+    "start:qa": "ng serve -c=qa --port=4200 --proxy-config=proxy/qa-proxy.conf.json",
     "start:prod": "ng serve --host 0.0.0.0 --port 4200 --public-host adnenhamdouni.com",
     "build": "ng build --configuration production",
     "test": "ng test",

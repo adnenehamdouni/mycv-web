@@ -12,16 +12,10 @@ services:
       - '/app/node_modules'
     ports:
       - '4201:4200'
-    command: >
-      bash -c "npm run start:dev"
-    environment:
-      - VIRTUAL_HOST=adnenhamdouni.com
-      - VIRTUAL_NETWORK=nginx-proxy
-      - VIRTUAL_PORT=4200
-      - LETSENCRYPT_HOST=adnenhamdouni.com
-      - LETSENCRYPT_EMAIL=admin@adnenhamdouni.com
     networks:
       - docker_default
+    command: >
+      bash -c "npm run start:dev"
 networks:
   docker_default:
-    external: true
+    external: false
