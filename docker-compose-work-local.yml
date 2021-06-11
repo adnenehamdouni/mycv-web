@@ -15,7 +15,7 @@ services:
     networks:
       - docker_default
     command: >
-      bash -c "npm run start:dev"
+      bash -c "cd /app && npm install && npm run start:prod"
 networks:
   docker_default:
     external: false

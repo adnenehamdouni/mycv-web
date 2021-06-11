@@ -25,5 +25,4 @@ RUN chown -R app /app/*
 
 # start app
 USER app
-CMD npm install
 CMD ng serve --host 0.0.0.0
