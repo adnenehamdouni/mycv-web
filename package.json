@@ -8,9 +8,6 @@
     "start:qa": "ng serve -c=qa --port=4202 --proxy-config=proxy/qa-proxy.conf.json",
     "start:prod": "ng serve --host 0.0.0.0 --port 4200 --public-host adnenhamdouni.com",
     "build": "ng build --configuration production",
-    "postbuild": "npm run deploy",
-    "predeploy": "rimraf ../mycv/src/main/resources/static/ && mkdirp ../mycv/src/main/resources/static/",
-    "deploy": "copyfiles -f dist/mycv/** ../mycv/src/main/resources/static/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
