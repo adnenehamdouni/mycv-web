@@ -1,33 +1,27 @@
 version: '3.5' # We use version 3.5 syntax
 services: # Here we define our service(s)
-
-  ### BEGIN SAMPLE WEBSITE & API ###
-  mycv-web:
-    restart: always
-    image: mycv-web
-    build: # Location of our Dockerfile
-      context: .
-      dockerfile: Dockerfile-nginx.dev
+  angular-service: # The name of the service
     container_name: mycv-web  # Container name
+    restart: always
+    build:  # Location of our Dockerfile
+      context: .
+      dockerfile: Dockerfile.dev
     ports:
-      - '83:80' # Port mapping
+      - '4200:4200' # Port mapping
     volumes:
-      - "./setup/volume/conf.d/:/etc/nginx/conf.d"
-      #- "./setup/config/config.js:/usr/share/nginx/html/config.js"
-      #- "./setup/html/:/usr/share/nginx/html"
+      - "/app/node_modules"
+      - "./:/app"
+    command: >
+      bash -c "cd /app && npm install && ng serve --host 0.0.0.0 --port 4200 --public-host adnenhamdouni.com"
     environment:
       - VIRTUAL_HOST=adnenhamdouni.com
       - VIRTUAL_NETWORK=nginx-proxy
-      - VIRTUAL_PORT=83
+      - VIRTUAL_PORT=4200
       - LETSENCRYPT_HOST=adnenhamdouni.com
       - LETSENCRYPT_EMAIL=admin@adnenhamdouni.com
     networks:
       - docker_default
 
-### OTHER SETTINGS ###
-
 networks:
   docker_default:
-    external: false
-
-
+    external: true

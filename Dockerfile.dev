@@ -1,25 +1,16 @@
-FROM node:14.16.1-alpine
+FROM node:14.16.1 as build
+
+WORKDIR /app
+COPY package.json /app
+
+RUN npm install && npm cache clean --force && npm cache verify
+RUN npm install -g @angular/cli
+
+COPY . /app
+
+RUN ng build
+#RUN ng start:prod
+#RUN ng serve
 
 EXPOSE 4200
 
-RUN adduser -S app
-
-ENV HOME=/home/app
-
-COPY package.json $HOME/
-RUN chown -R app $HOME/*
-
-USER app
-WORKDIR $HOME
-
-RUN rm -rf node_modules package-lock.json
-RUN npm cache clean --force && npm cache verify
-RUN npm install
-
-USER root
-COPY . $HOME/
-RUN chown -R app $HOME/*
-
-USER app
-
-RUN npm run build

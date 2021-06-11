@@ -1,0 +1,33 @@
+version: '3.5' # We use version 3.5 syntax
+services: # Here we define our service(s)
+
+  ### BEGIN SAMPLE WEBSITE & API ###
+  mycv-web:
+    restart: always
+    image: mycv-web
+    build: # Location of our Dockerfile
+      context: .
+      dockerfile: Dockerfile-nginx.dev
+    container_name: mycv-web  # Container name
+    ports:
+      - '83:80' # Port mapping
+    volumes:
+      - "./setup/volume/conf.d/:/etc/nginx/conf.d"
+      #- "./setup/config/config.js:/usr/share/nginx/html/config.js"
+      #- "./setup/html/:/usr/share/nginx/html"
+    environment:
+      - VIRTUAL_HOST=adnenhamdouni.com
+      - VIRTUAL_NETWORK=nginx-proxy
+      - VIRTUAL_PORT=83
+      - LETSENCRYPT_HOST=adnenhamdouni.com
+      - LETSENCRYPT_EMAIL=admin@adnenhamdouni.com
+    networks:
+      - docker_default
+
+### OTHER SETTINGS ###
+
+networks:
+  docker_default:
+    external: true
+
+
