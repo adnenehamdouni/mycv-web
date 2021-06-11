@@ -1,26 +1,28 @@
 # base image
-FROM node:14.17.0
+FROM node:14.17.0-alpine
 
-
-#ENV HOME=/usr/src/app
-ENV HOME=/app
-
-RUN mkdir -p $HOME
+RUN adduser -S app
 
 # set working directory
-WORKDIR $HOME
+WORKDIR /app
 
 # add `/app/node_modules/.bin` to $PATH
-ENV PATH $HOME/node_modules/.bin:$PATH
+ENV PATH /app/node_modules/.bin:$PATH
 
 # install and cache app dependencies
-COPY package.json $HOME
+COPY package.json /app
+RUN chown -R app /app/*
+
 RUN npm install
-RUN npm install -g @angular/cli@latest
 
 # add app
-COPY . $HOME
+USER root
+
+RUN npm install -g @angular/cli@7.3.9
+
+COPY . /app
+RUN chown -R app /app/*
 
 # start app
+USER app
 CMD ng serve --host 0.0.0.0
-#CMD npm run start:dev
