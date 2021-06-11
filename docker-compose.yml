@@ -24,4 +24,4 @@ services:
       - docker_default
 networks:
   docker_default:
-    external: true
+    external: false
