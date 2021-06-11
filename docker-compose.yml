@@ -13,11 +13,11 @@ services:
     ports:
       - '4201:4200'
     command: >
-      bash -c "npm run start:dev"
+      bash -c "cd /app && npm run start:dev"
     environment:
       - VIRTUAL_HOST=adnenhamdouni.com
       - VIRTUAL_NETWORK=nginx-proxy
-      - VIRTUAL_PORT=4200
+      - VIRTUAL_PORT=4201
       - LETSENCRYPT_HOST=adnenhamdouni.com
       - LETSENCRYPT_EMAIL=admin@adnenhamdouni.com
     networks:
